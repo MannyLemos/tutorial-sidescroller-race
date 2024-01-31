@@ -20,7 +20,8 @@
         "tutorial/sidescroller/activity1.md",
         "tutorial/sidescroller/activity2.md",
         "tutorial/sidescroller/activity3.md",
-        "tutorial/sidescroller/activity4.md"
+        "tutorial/sidescroller/activity4.md",
+        "skillmap.md"
     ],
     "testFiles": [
         "test.ts"
