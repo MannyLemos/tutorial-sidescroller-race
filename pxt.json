@@ -16,7 +16,11 @@
         "custom.ts",
         "tutorial/sidescroller/activity5.md",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "tutorial/sidescroller/activity1.md",
+        "tutorial/sidescroller/activity2.md",
+        "tutorial/sidescroller/activity3.md",
+        "tutorial/sidescroller/activity4.md"
     ],
     "testFiles": [
         "test.ts"
