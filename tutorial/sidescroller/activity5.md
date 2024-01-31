@@ -1,4 +1,5 @@
 # Speedy Finish
+
 ```template
 namespace SpriteKind {
     export const Projectile_Spawner = SpriteKind.create()
@@ -283,7 +284,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 function Enable_Drag_Reduction () {
-    dragReduction = 1
+    dragReductionState = 1
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
@@ -293,12 +294,12 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 function Disable_Drag_Reduction () {
-    dragReduction = 0
+    dragReductionState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
 }
 function Update_Drag_Reduction_Factor () {
-    if (dragReduction == 0) {
+    if (dragReductionState == 0) {
         dragReductionFactor = Math.constrain(dragReductionFactor - 0.005, 1, 1.3)
     } else {
         dragReductionFactor = Math.constrain(dragReductionFactor + 0.005, 1, 1.3)
@@ -358,17 +359,18 @@ To show that speed boosting is occuring we need to add the following to the<br>
 ``||function:Enable_Drag_Reduction||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
-Set ``||variables:dragReduction||` to **1**
+Set ``||variables:dragReductionState||`` to **1**
 ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
-Set ``||variables:DrsOverlay||` to **DRS**
+Set ``||variables:DrsOverlay||`` to ``||textsprite:text||`` "**DRS**"
 ___
-3. Using the ``||sprite:Sprites||`` category,<br>
-Set ``||variables:myRacer||` image to **pink-player-drs**
+3. Using the ``||sprites:Sprites||`` category,<br>
+``||variables:set sprite myRacer||`` to image to <br>
+**pink-player-drs** in the **Gallery**.
 
 ```blocks
 function Enable_Drag_Reduction () {
-    dragReduction = 1
+    dragReductionState = 1
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
@@ -415,7 +417,7 @@ To show that speed boosting is no longer occuring we need to add the following t
 ``||function:Disable_Drag_Reduction||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
-Set ``||variables:dragReduction||` to **0**
+Set ``||variables:dragReductionState||` to **0**
 ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
 Set ``||variables:DrsOverlay||` to **""**
@@ -425,7 +427,7 @@ Set ``||variables:myRacer||` image to **pink-player**
 
 ```blocks
 function Disable_Drag_Reduction () {
-    dragReduction = 0
+    dragReductionState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
 }
@@ -467,7 +469,7 @@ game.onUpdateInterval(25, function () {
 Altering the Drag Reduction Factor
 ---
 1. Create an if **else** block with the condition:<br>
-``||logic:if||`` ``||variables:dragReduction||`` ``||logic:= 0 then||`` ||logic:else||``<br>
+``||logic:if||`` ``||variables:dragReductionState||`` ``||logic:= 0 then||`` ||logic:else||``<br>
 ___
 2. Place the ``||logic:if||`` block<br>
 you just created into the <br>
@@ -490,7 +492,7 @@ you should notice the red DRS overlay your speed slowly increasing to a peak.
 
 ```blocks
 function Update_Drag_Reduction_Factor () {
-    if (dragReduction == 0) {
+    if (dragReductionState == 0) {
         dragReductionFactor = Math.constrain(dragReductionFactor - 0.005, 1, 1.3)
     } else {
         dragReductionFactor = Math.constrain(dragReductionFactor + 0.005, 1, 1.3)
