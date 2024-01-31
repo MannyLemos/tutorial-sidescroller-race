@@ -434,13 +434,13 @@ To show that speed boosting is no longer occuring we need to add the following t
 ``||function:Disable_Drag_Reduction||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
-Set ``||variables:dragReductionState||` to **0**
+Set ``||variables:dragReductionState||`` to **0**
 ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
-Set ``||variables:DrsOverlay||` to **""**
+Set ``||variables:DrsOverlay||`` to **""**
 ___
 3. Using the ``||sprite:Sprites||`` category,<br>
-Set ``||variables:myRacer||` image to **pink-player**
+Set ``||variables:myRacer||`` image to **pink-player**
 
 ```blocks
 function Disable_Drag_Reduction () {
