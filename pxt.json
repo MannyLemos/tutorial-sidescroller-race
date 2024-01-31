@@ -13,7 +13,9 @@
         "README.md",
         "assets.json",
         "custom.ts",
-        "tutorial/sidescroller/activity5.md"
+        "tutorial/sidescroller/activity5.md",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
