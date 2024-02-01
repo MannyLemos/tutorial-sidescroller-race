@@ -269,7 +269,6 @@ Change the image of ``||variables:myRacer||`` to
 ```blocks
 // @hide 
 let DrsOverlay = textsprite.create("", 0, 2)
-// @hide 
 let myRacer: Sprite = null
 function Enable_Drag_Reduction () {
     dragReductionState = 1
