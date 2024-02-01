@@ -175,21 +175,16 @@ forever(function () {
 ```
 
 ```ghost
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (raceStage > 1) {
-        Enable_Drag_Reduction()
-    }
-})
-function Enable_Drag_Reduction () {
-    dragReductionState = 1
-    DrsOverlay.setText("DRS")
-    myRacer.setImage(assets.image`pink-player-drs`)
-}
-controller.A.onEvent(ControllerButtonEvent.Released, function () {
-    if (raceStage > 1) {
-        Disable_Drag_Reduction()
-    }
-})
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {})
+if (raceStage > 1) {}
+Enable_Drag_Reduction()
+function Enable_Drag_Reduction () {}
+dragReductionState = 1
+DrsOverlay.setText("DRS")
+myRacer.setImage(assets.image`pink-player-drs`)
+controller.A.onEvent(ControllerButtonEvent.Released, function () {})
+if (raceStage > 1) {}
+Disable_Drag_Reduction()
 function Disable_Drag_Reduction () {
     dragReductionState = 0
     DrsOverlay.setText("")
@@ -272,8 +267,6 @@ function Enable_Drag_Reduction () {
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
-// @hide 
-let DrsOverlay = textsprite.create("", 0, 2)
 ```
 
 ## {Step 3}
