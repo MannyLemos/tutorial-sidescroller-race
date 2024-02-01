@@ -34,7 +34,6 @@ function Initialize_Objects () {
     0 0 0 0 c c c c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c c f 0 0 c 0 0 0 0
     `, SpriteKind.Player)
     myRacer.setStayInScreen(true)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
 }
 function Initialize_Overlays () {
@@ -106,7 +105,6 @@ function Initialize_Objects () {
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Projectile_Spawner)
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
 }
 function Initialize_Overlays () {
