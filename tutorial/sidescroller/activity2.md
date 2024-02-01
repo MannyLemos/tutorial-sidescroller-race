@@ -855,6 +855,66 @@ ___
 ``||variables:set raceStage to 2||``
 
 ```blocks
+function Initialize_Variables () {
+    raceStage = 0
+    drsFactor = 1
+    distanceRemaining = 1500
+    racerLaunched = 0
+    dragReduction = 0
+    nextOpponentSpawnTime = 0
+}
+function Initialize_Overlays () {
+    ElapsedTimeOverlay = textsprite.create("", 0, 1)
+    ElapsedTimeOverlay.setPosition(0, 8)
+    VelocityOverlay = textsprite.create("0", 0, 1)
+    VelocityOverlay.setPosition(125, 8)
+    RemainingDistanceOverlay = textsprite.create("", 0, 1)
+    RemainingDistanceOverlay.setPosition(75, 8)
+    DrsOverlay = textsprite.create("", 0, 2)
+    DrsOverlay.setPosition(0, 17)
+}
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (raceStage == 1) {
+        racerLaunched = 1
+        loopStartTime = game.runtime()
+    } else if (raceStage == 0) {
+        raceStage = 3
+        game.setGameOverMessage(false, "FALSE START!")
+        game.gameOver(false)
+    }
+})
+function Race_Countdown () {
+    countdown.SetCountdownImage1()
+    pause(500)
+    countdown.SetCountdownImage2()
+    countdown.PlayCountdownTone()
+    pause(500)
+    countdown.SetCountdownImage3()
+    countdown.PlayCountdownTone()
+    pause(500)
+    countdown.SetCountdownImage4()
+    countdown.PlayCountdownTone()
+    pause(500)
+    countdown.SetCountdownImage5()
+    countdown.PlayCountdownTone()
+    pause(500)
+    countdown.SetCountdownImage6()
+    countdown.PlayCountdownTone()
+    pause(randint(200, 1500))
+    raceStage = 1
+    countdown.SetCountdownImage7()
+    countdown.PlayStartTone()
+    raceStartTime = game.runtime()
+    pauseUntil(() => racerLaunched == 1)
+}
+// @hide
+function Initialize_Variables () {}
+// @hide
+function Initialize_Overlays () {}
+// @hide
+function Race_Countdown () {}
+// @hide
+function Initialize_Objects () {}
 Initialize_Variables()
 Race_Countdown()
 Initialize_Objects()
