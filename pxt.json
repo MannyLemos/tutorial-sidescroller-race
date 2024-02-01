@@ -24,7 +24,8 @@
         "skillmap.md",
         "track.ts",
         "lights.ts",
-        "more_lights.ts"
+        "more_lights.ts",
+        "finish.ts"
     ],
     "testFiles": [
         "test.ts"

@@ -106,6 +106,6 @@ namespace finish {
      */
     //% block
     export function SetFinishBackground() {
-        track.setFinish()
+        finish.setFinish()
     }
 }
