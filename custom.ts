@@ -13,7 +13,7 @@ namespace foundation {
      */
     //% block
     export function SetBackground() {
-        setTrackImage()
+        track.setTrack()
     }
 }
 
