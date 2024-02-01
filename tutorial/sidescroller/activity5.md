@@ -262,8 +262,8 @@ ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
 Set ``||variables:DrsOverlay||`` to ``||textsprite:text||`` "**DRS**"
 ___
-3. Using the ``||sprites:Sprites||`` category,<br>
-Change the image of ``||variables:myRacer||`` to<br>
+3. Using the ``||sprites:Sprites||`` category,
+Change the image of ``||variables:myRacer||`` to
 **pink-player-drs** in the **Gallery** tab.
 
 ```blocks
