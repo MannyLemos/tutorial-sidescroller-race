@@ -4,7 +4,7 @@
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
@@ -117,7 +117,7 @@ let myRacer: Sprite = null
 let progressionVelocity = 0
 let raceStartTime = 0
 let nextOpponentSpawnTime = 0
-let dragReductionState = 0
+let drsState = 0
 let racerLaunched = 0
 let distanceRemaining = 0
 let dragReductionFactor = 0

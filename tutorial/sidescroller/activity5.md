@@ -8,7 +8,7 @@ namespace SpriteKind {
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
@@ -176,7 +176,7 @@ forever(function () {
 
 ```ghost
 function Enable_Drag_Reduction () {
-    dragReductionState = 1
+    drsState = 1
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
@@ -186,12 +186,12 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
     }
 })
 function Disable_Drag_Reduction () {
-    dragReductionState = 0
+    drsState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
 }
-function Update_Drag_Reduction_Factor () {
-    if (dragReductionState == 0) {
+function Update_DRS_Factor () {
+    if (drsState == 0) {
         dragReductionFactor = Math.constrain(dragReductionFactor - 0.005, 1, 1.3)
     } else {
         dragReductionFactor = Math.constrain(dragReductionFactor + 0.005, 1, 1.3)
@@ -252,7 +252,7 @@ To show that speed boosting is occuring we need to add the following to the<br>
 ``||function:Enable_Drag_Reduction||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
-Set ``||variables:dragReductionState||`` to **1**
+Set ``||variables:drsState||`` to **1**
 ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
 Set ``||variables:DrsOverlay||`` to ``||textsprite:text||`` "**DRS**"
@@ -263,7 +263,7 @@ Change the image of ``||variables:myRacer||`` to
 
 ```blocks
 function Enable_Drag_Reduction () {
-    dragReductionState = 1
+    drsState = 1
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
@@ -283,7 +283,7 @@ ___
 2. Grab the <br>
 ``||controller:on [ A ] button [ pressed ]||`` block.<br>
 ► Drag it into workspace.<br>
-► Change the **pressed** to **released**
+► Change **pressed** to **released**
 ___
 3. Create an if block with the condition:<br>
 ``||logic:if||`` ``||variables:raceStage||`` ``||logic:> 1 then||``<br>
@@ -299,6 +299,7 @@ ___
 function from inside the ``||logic:if||`` block we set up in parts 3 - 4.
 
 ```blocks
+function Disable_Drag_Reduction () {}
 controller.A.onEvent(ControllerButtonEvent., function () {
     if (raceStage > 1) {
         Disable_Drag_Reduction()
@@ -313,20 +314,24 @@ To show that speed boosting is no longer occuring we need to add the following t
 ``||function:Disable_Drag_Reduction||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
-Set ``||variables:dragReductionState||`` to **0**
+Set ``||variables:drsState||`` to **0**
 ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
 Set ``||variables:DrsOverlay||`` to **""**
 ___
 3. Using the ``||sprite:Sprites||`` category,<br>
-Set ``||variables:myRacer||`` image to **pink-player**
+Set ``||variables:myRacer||`` image to <br>
+**pink-player** in the **gallery**
 
 ```blocks
 function Disable_Drag_Reduction () {
-    dragReductionState = 0
+    drsState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
 }
+// @hide 
+let DrsOverlay = textsprite.create("", 0, 2) 
+let myRacer: Sprite = null
 ```
 
 ## {Step 5}
@@ -338,10 +343,10 @@ In order to do this, we can use the<br>
 ``||game:on game update every 25 ms||``<br>
 we set up in activity 3
 ___
-1. Create a new Function ``||functions:Update_Drag_Reduction_Factor||``
+1. Create a new Function ``||functions:Update_DRS_Factor||``
 ___
 2. Call the<br>
-``||functions:Update_Drag_Reduction_Factor||``<br>
+``||functions:Update_DRS_Factor||``<br>
 function from inside the top of the<br>
 ``||logic:if raceStage = 2||`` block located inside the<br>
 ``||game:on game update every 25 ms||`` block.
@@ -351,10 +356,10 @@ function from inside the top of the<br>
 function Update_Variables () {}
 // @hide
 function Update_Overlays () {}
-function Update_Drag_Reduction_Factor () {}
+function Update_DRS_Factor () {}
 game.onUpdateInterval(25, function () {
     if (raceStage == 2) {
-        Update_Drag_Reduction_Factor()
+        Update_DRS_Factor()
         Update_Variables()
         Update_Overlays()
     }
@@ -365,11 +370,11 @@ game.onUpdateInterval(25, function () {
 Altering the Drag Reduction Factor
 ---
 1. Create an if **else** block with the condition:<br>
-``||logic:if||`` ``||variables:dragReductionState||`` ``||logic:= 0 then||`` ||logic:else||``<br>
+``||logic:if||`` ``||variables:drsState||`` ``||logic:= 0 then||`` ||logic:else||``<br>
 ___
 2. Place the ``||logic:if||`` block<br>
 you just created into the <br>
-``||functions:Update_Drag_Reduction_Factor||`` function.
+``||functions:Update_DRS_Factor||`` function.
 ___
 3. Within the ``||logic:if||`` block write the following assignment:
 ``||variables:set dragReductionFactor to||``<br>
@@ -387,8 +392,8 @@ Try playing the game. If you hold A (spacebar) during the race,
 you should notice the red DRS overlay your speed slowly increasing to a peak.
 
 ```blocks
-function Update_Drag_Reduction_Factor () {
-    if (dragReductionState == 0) {
+function Update_DRS_Factor () {
+    if (drsState == 0) {
         dragReductionFactor = Math.constrain(dragReductionFactor - 0.005, 1, 1.3)
     } else {
         dragReductionFactor = Math.constrain(dragReductionFactor + 0.005, 1, 1.3)
@@ -421,7 +426,7 @@ function from inside the bottom of this new ``||logic:if||`` block.
 
 ```blocks
 // @hide 
-function Update_Drag_Reduction_Factor () {}
+function Update_DRS_Factor () {}
 // @hide 
 function Update_Race_Parameters () {}
 // @hide 
@@ -429,7 +434,7 @@ function Update_Text_Overlays () {}
 function Run_Finishing_Sequence () {}
 game.onUpdateInterval(25, function () {
     if (raceStage == 2) {
-        Update_Drag_Reduction_Factor()
+        Update_DRS_Factor()
         Update_Race_Parameters()
         Update_Text_Overlays()
         if (distanceRemaining <= 0) {

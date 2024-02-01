@@ -4,7 +4,7 @@
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
@@ -19,7 +19,7 @@ function Initialize_Objects () {
 let myRacer: Sprite = null
 let progressionVelocity = 0
 let nextOpponentSpawnTime = 0
-let dragReductionState = 0
+let drsState = 0
 let racerLaunched = 0
 let distanceRemaining = 0
 let dragReductionFactor = 0
@@ -143,19 +143,19 @@ function Initialize_Variables () {
 ```
 
 ## {Step 7}
-dragReductionState Variable
+drsState Variable
 ---
 1. Click the ``||variables:Variables||`` category.
 ___
 2. Click ``||arrays:Make a Variable...||``
 ___
-3. Name the variable ``||variables:dragReductionState||``
+3. Name the variable ``||variables:drsState||``
 ___
 4. Click ``||loops:Ok ✓||``.
 ___
-5. Drag the ``||variables: set dragReductionState to 0||`` block into the ``||functions:Initialize_Variables||`` function block.
+5. Drag the ``||variables: set drsState to 0||`` block into the ``||functions:Initialize_Variables||`` function block.
 ___
-``||variables:dragReductionState||`` will be used to track speed boosting state. In F1 racing this is known as drag reduction.<br>
+``||variables:drsState||`` will be used to track speed boosting state. In F1 racing this is known as drag reduction.<br>
 0 → Speed Boost Disabled<br>
 1 → Speed Boost Enabled<br>
 Don't worry, You dont need to remember this!
@@ -164,7 +164,7 @@ Don't worry, You dont need to remember this!
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
 }
 ```
 
@@ -193,7 +193,7 @@ ___
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
 }
 ```
@@ -221,7 +221,7 @@ Don't worry, You dont need to remember this!
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
     racerLaunched = 0
 }
@@ -248,7 +248,7 @@ By default we set this to zero because we want to spawn an opponent as soon as t
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
@@ -290,7 +290,7 @@ ___
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
-    dragReductionState = 0
+    drsState = 0
     dragReductionFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
