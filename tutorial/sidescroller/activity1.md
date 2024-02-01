@@ -323,8 +323,9 @@ Creating our Racer
 ---
 1. Click the ``||sprites:Sprites||`` category.
 ___
-2. Drag the <br>``||variables(sprites): set mySprite to sprite [ ] of kind Player||``<br>
-block into the<br>
+2. Drag the <br>
+``||variables:set mySprite to||`` ``||sprites:sprite [ ] of kind Player||``<br>
+block into the bottom of the<br>
 ``||functions:Initialize_Objects||`` function block.
 ___
 3. Click the ``||variables:mySprite||`` dropdown.<br>
@@ -336,7 +337,7 @@ ___
 ► Click ``||loops:Done||``<br>
 Note: The name of a gallery asset can be determined by hovering the mouse over the asset for approximately 2 seconds.
 ___
-A pink racecar larger than the screen should be present in your game window!
+A pink racecar should be present in your game window!
 
 ```blocks
 function Initialize_Objects () {
