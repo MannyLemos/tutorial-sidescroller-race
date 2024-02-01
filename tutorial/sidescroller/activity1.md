@@ -105,7 +105,7 @@ ___
 6. Click the **0** inside ``||variables: set distanceRemaining to 0||``<br>
 ► Change it to **1500**.
 ___
-We will use ``||variables:distanceRemaining||`` to track the distance remaining in meters before the race finishes.
+``||variables:distanceRemaining||`` will be used to track the distance remaining in meters before the race finishes.
 
 ```blocks
 function Initialize_Variables () {
@@ -126,7 +126,7 @@ ___
 ___
 5. Grab the <br>``||variables: set raceStage to 0||`` block.<br>
  ► Drag it into the ``||functions:Initialize_Variables||`` function block.
- ___
+___
 ``||variables:raceStage||`` will be used to track the stage of the game.<br>
 0 → Game Setup<br>
 1 → Await Racer Launch<br>
