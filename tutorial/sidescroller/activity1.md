@@ -224,6 +224,8 @@ function Initialize_Variables () {
     drsFactor = 1
     racerLaunched = 0
 }
+// @hide
+let myRacer: Sprite = null
 ```
 
 ## {Step 10}
@@ -286,16 +288,8 @@ ___
 
 ```blocks
 // @hide
-function Initialize_Variables () {
-    distanceRemaining = 1500
-    raceStage = 0
-    drsState = 0
-    drsFactor = 1
-    racerLaunched = 0
-    nextOpponentSpawnTime = 0
-}
-function Initialize_Objects () {
-}
+function Initialize_Variables () {}
+function Initialize_Objects () {}
 Initialize_Variables()
 Initialize_Objects()
 ```

@@ -37,7 +37,7 @@ function Initialize_Objects () {
     scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
 }
-let myRacer = null
+let myRacer: Sprite = null
 Initialize_Variables()
 Initialize_Objects()
 
