@@ -341,7 +341,7 @@ A pink racecar should be present in your game window!
 
 ```blocks
 function Initialize_Objects () {
-    scene.setBackgroundImage(assets.image`track`)
+    foundation.SetBackground()
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
 }
 ```
