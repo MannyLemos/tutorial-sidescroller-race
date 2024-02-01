@@ -385,6 +385,5 @@ function Initialize_Objects () {
     controller.moveSprite(myRacer, 75, 75)
     myRacer.setStayInScreen(true)
 }
-// @hide
 let myRacer: Sprite = null
 ```
