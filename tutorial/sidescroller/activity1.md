@@ -347,30 +347,6 @@ function Initialize_Objects () {
 ```
 
 ## {Step 15}
-Sizing our Racer
----
-1. Click the ``||scaling:Scaling||`` category.
-___
-2. Drag the <br>``||scaling(sprites): change mySprite scale by 50 percent uniformly anchor middle||`` block into 
-bottom of the ``||functions:Initialize_Objects||`` function block.
-___
-3. Click the ``||variables:mySprite||`` dropdown.<br>
-Select ``||variables:myRacer||`` from the list.
-___
-4. Change the **50** scaling value to **-85**.<br>
-We make the value negative as we want to shrink the size of our ``||variables:myRacer||`` art.
-___
-Our pink racecar should now be fully visible in the game window.
-
-```blocks
-function Initialize_Objects () {
-    scene.setBackgroundImage(assets.image`track`)
-    myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-}
-```
-
-## {Step 16}
 Moving our Racer
 ---
 1. Click the ``||controller:Controller||`` category.
@@ -398,7 +374,7 @@ function Initialize_Objects () {
 }
 ```
 
-## {Step 17}
+## {Step 16}
 Keeping our Racer on Screen
 ---
 1. Click the ``||sprites:Sprites||`` category.
