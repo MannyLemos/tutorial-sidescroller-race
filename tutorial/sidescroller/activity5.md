@@ -267,6 +267,7 @@ Change the image of ``||variables:myRacer||`` to
 **pink-player-drs** in the **Gallery** tab.
 
 ```blocks
+// @hide let DrsOverlay = textsprite.create("", 0, 2)
 function Enable_Drag_Reduction () {
     dragReductionState = 1
     DrsOverlay.setText("DRS")
