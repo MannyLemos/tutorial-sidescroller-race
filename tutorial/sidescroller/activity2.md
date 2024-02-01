@@ -126,7 +126,7 @@ Initialize_Overlays()
 ```
 
 ## {Step 1}
-Creating the Race_Countdown Function
+Creating the Race Countdown Function
 ---
 Lets create a function named Race_Countdown. It will be used to store the countdown animation that play before our race begins.
 ___
@@ -149,7 +149,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 2}
-Calling th Race Countdown Function
+Calling the Race Countdown Function
 ---
 Lets call ``||functions:call Race_Countdown||`` before ``||functions:call Initalize_Objects||``<br>
 We do this so that our racecar is not visible during the countdown animation.
@@ -211,7 +211,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 4}
-Race_Countdown Frame 2
+Race Countdown Frame 2
 ---
 The second frame shows 1 light turned on.
 ___
@@ -250,7 +250,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 5}
-Race_Countdown Frame 3
+Race Countdown Frame 3
 ---
 The third frame shows 2 lights turned on.
 ___
@@ -292,7 +292,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 6}
-Race_Countdown Frame 4
+Race Countdown Frame 4
 ---
 The fourth frame shows 3 lights turned on.
 ___
@@ -337,7 +337,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 7}
-Race_Countdown Frame 5
+Race Countdown Frame 5
 ---
 The fifth frame shows 4 lights turned on.
 ___
@@ -385,7 +385,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 8}
-Race_Countdown Frame 6
+Race Countdown Frame 6
 ---
 The sixth frame shows 5 lights turned on.<br>
 Note: In this stage we wait a random amount of time between 200ms and 1500ms after the 5 lights are turned on. 
@@ -450,7 +450,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 9}
-Race_Countdown Frame 7
+Race Countdown Frame 7
 ---
 The seventh frame shows 0 lights turned on and a prompt for users to **Press B**.<br>
 This frame is **IMPORTANT**<br>
@@ -583,9 +583,9 @@ ___
 and<br>
 ``||variables:Variables||`` → ``||variables:raceStage||``<br>
 Create the following: <br>
-``||logic:else if (raceStage = 0) then||``
+``||logic:else if||`` ``||variables:raceStage||`` ``||logic:= 0 then||``
 ___
-7. Inside this else if statement create:<br>
+7. Inside this `||logic:else if||`` statement create the assignments:<br>
 ► ``||variables:set raceStage = 3||``<br><br>
 ► ``||game:use message "FALSE START" for <LOSE>||``<br><br>
 ► ``||game:game over <LOSE>||``<br><br>
