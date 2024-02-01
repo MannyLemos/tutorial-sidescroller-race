@@ -612,7 +612,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 ```
 
 ## {Step 12}
-Creating the Initialize_Overlays Function
+Creating the Initialize Overlays Function
 ---
 Lets create a function named Initialize_Overlays.<br>
 Text overlays will be used to display gametime metrics.
@@ -636,7 +636,7 @@ function Initialize_Overlays () {
 ```
 
 ## {Step 13}
-Calling Initialize_Overlays Function
+Calling Initialize Overlays Function
 ---
 Lets call ``||functions:call Initialize_Overlays||`` at the end of our ``||loops:on start||`` block..
 ___
@@ -675,7 +675,7 @@ ___
 1. Click the ``||textsprite:TextSprite||`` category.
 ___
 2. Grab the <br>
-``||textsprite:set textSprite to text sprite "" +||`` block.<br>
+``||variables:set textSprite to||`` ``||textsprite:text sprite "" +||`` block.<br>
 ► Drag it into the ``||functions:Initialize_Overlays||`` function.
 ___
 3. Change the name of<br>
@@ -687,7 +687,7 @@ ___
 4. Click the ``||sprites:Sprites||`` category.
 ___
 5. Grab the <br>
-``||sprites:set mySprite position to x 0 y 0||`` block.<br>
+``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
 ► Ensure **x** = **0**<br>
 ► Ensure **y** = **8**
