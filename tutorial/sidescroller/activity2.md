@@ -122,7 +122,7 @@ Initialize_Variables()
 Race_Countdown()
 Initialize_Objects()
 Initialize_Overlays()
-
+raceStage = 2
 ```
 
 ## {Step 1}
@@ -919,4 +919,5 @@ Initialize_Variables()
 Race_Countdown()
 Initialize_Objects()
 Initialize_Overlays()
+raceStage = 2
 ```
