@@ -25,7 +25,8 @@
         "track.ts",
         "lights.ts",
         "more_lights.ts",
-        "finish.ts"
+        "finish.ts",
+        "some_lights.ts"
     ],
     "testFiles": [
         "test.ts"
