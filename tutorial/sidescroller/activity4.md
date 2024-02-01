@@ -34,7 +34,6 @@ function Initialize_Objects () {
     0 0 0 0 c c c c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c c f 0 0 c 0 0 0 0
     `, SpriteKind.Player)
     myRacer.setStayInScreen(true)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
 }
 function Initialize_Overlays () {
@@ -125,7 +124,6 @@ function Initialize_Objects () {
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Projectile_Spawner)
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
 }
 function Initialize_Overlays () {
@@ -177,7 +175,6 @@ function Update_Overlays () {
 function Spawn_Opponent () {
     OpponentSpawner.setPosition(180, randint(13, 108))
     OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, dragReductionFactor * randint(-25, -75), 0)
-    scaling.scaleByPercent(OpponentRacer, -50, ScaleDirection.Uniformly, ScaleAnchor.Middle)
 }
 let ElapsedTimeOverlay = null
 let VelocityOverlay = null
@@ -261,7 +258,6 @@ Click ``||sprites:Add a new kind...||``, and change the name to ``||sprites:Oppo
 function Initialize_Objects () {
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Opponent_Spawner)
 }
@@ -443,33 +439,6 @@ function Spawn_Opponent () {
 ```
 
 ## {Step 8}
-Size the opponent racer
----
-The opponent racer has been placed, but is too big. Lets downscale them.
-___
-1. Click the ``||scaling:Scaling||`` category.
-___
-2. Drag the <br>``||scaling(sprites): change mySprite scale by 50 percent uniformly anchor middle||`` block into 
-bottom of the ``||functions:Spawn_Opponent||`` function block.
-___
-3. Click the ``||variables:mySprite||`` dropdown.<br>
-Select ``||variables:OpponentRacer||`` from the list.
-___
-4. Change the **50** scaling value to **-50**.<br>
-We make the value negative as we want to shrink the size of our ``||variables:OpponentRacer||`` art.
-___
-When you play the game, enemies will now spawn.<br>
-Give it a try!
-
-```blocks
-function Spawn_Opponent () {
-    OpponentSpawner.setPosition(180, randint(13, 108))
-    OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, dragReductionFactor * randint(-25, -75), 0)
-    scaling.scaleByPercent(OpponentRacer, -50, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-}
-``` 
-
-## {Step 9}
 Player to Enemy Hit Detection
 ---
 There is currently no hit detection between our player racer and the opponent racers.<br>
@@ -490,7 +459,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 ```
 
-## {Step 10}
+## {Step 9}
 Destroy the sprites on Crash
 ---
 After the sprites collide we want to destroy both.
@@ -527,7 +496,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 ```
 
-## {Step 11}
+## {Step 10}
 Update Race stage then Pause
 ---
 1. Click the ``||variables:Variables||`` category.
@@ -554,7 +523,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 ```
 
-## {Step 12}
+## {Step 11}
 Display Game Over
 ---
 1. Create the following statements:<br>
@@ -575,7 +544,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 ```
 
-## {Step 13}
+## {Step 12}
 Enemy to Enemy Hit Detection
 ---
 There is currently no hit detection when 2 opponents collide.<br>
@@ -599,7 +568,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite
 })
 ```
 
-## {Step 14}
+## {Step 13}
 Destroy the sprites on Crash
 ---
 After the sprites collide we want to destroy both.

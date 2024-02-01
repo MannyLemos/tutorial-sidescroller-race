@@ -56,7 +56,6 @@ function Initialize_Objects () {
     0 0 0 0 c c c c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c c f 0 0 c 0 0 0 0
     `, SpriteKind.Player)
     myRacer.setStayInScreen(true)
-    scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
 }
 function Initialize_Overlays () {
@@ -135,7 +134,6 @@ function Spawn_Opponents () {
     0 0 0 c c c b c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c b c f 3 d c b b 0 0
     0 0 0 0 c c c c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c c c c b b c c 0 0 0
     `, OpponentSpawner, dragReductionFactor * randint(-25, -75), 0)
-    scaling.scaleByPercent(OpponentRacer, -50, ScaleDirection.Uniformly, ScaleAnchor.Middle)
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprites.destroy(sprite, effects.fire, 500)
