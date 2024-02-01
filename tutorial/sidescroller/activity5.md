@@ -263,8 +263,8 @@ ___
 Set ``||variables:DrsOverlay||`` to ``||textsprite:text||`` "**DRS**"
 ___
 3. Using the ``||sprites:Sprites||`` category,<br>
-``||variables:set sprite myRacer||`` to image to <br>
-**pink-player-drs** in the **Gallery**.
+Change the image of ``||variables:myRacer||`` to<br>
+**pink-player-drs** in the **Gallery** tab.
 
 ```blocks
 function Enable_Drag_Reduction () {
