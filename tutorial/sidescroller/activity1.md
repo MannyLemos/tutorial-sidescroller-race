@@ -367,7 +367,7 @@ Using the Controller D-Pad / WASD / Arrow Keys, you should now be able to move t
 
 ```blocks
 function Initialize_Objects () {
-    scene.setBackgroundImage(assets.image`track`)
+    foundation.SetBackground()
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
@@ -389,7 +389,7 @@ The racecar should now be contained to the game window.
 
 ```blocks
 function Initialize_Objects () {
-    scene.setBackgroundImage(assets.image`track`)
+    foundation.SetBackground()
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     scaling.scaleByPercent(myRacer, -85, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     controller.moveSprite(myRacer, 75, 75)
