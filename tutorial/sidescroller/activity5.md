@@ -274,7 +274,6 @@ function Enable_Drag_Reduction () {
 }
 // @hide 
 let DrsOverlay = textsprite.create("", 0, 2)
-let myRacer: Sprite = null
 ```
 
 ## {Step 3}
