@@ -151,7 +151,7 @@ ___
 ___
 3. Name the variable ``||variables:drsState||``
 ___
-4. Click ``||loops:Ok ✓||``.
+4. Click ``||loops:Ok ✓||``
 ___
 5. Drag the ``||variables: set drsState to 0||`` block into the ``||functions:Initialize_Variables||`` function block.
 ___
