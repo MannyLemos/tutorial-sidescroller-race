@@ -576,7 +576,7 @@ NOTE:<br>
 can be found in ``||game:Game||`` category.<br>
 ___
 5. Click the ``||logic:+||`` at the bottom of the ``||logic:if else||`` block.<br>
-The ``||logic:else||`` should turn into an ``||logic:else if <statement>||``
+The ``||logic:else||`` should turn into an ``||logic:else if <statement> then||``
 ___
 6. Using the <br>
 ``||logic:Logic||`` → ``||logic:0 = 0||``<br>
