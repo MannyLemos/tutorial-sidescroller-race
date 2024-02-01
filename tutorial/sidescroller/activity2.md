@@ -496,9 +496,9 @@ ___
 ► Change the ``||logic:true||`` to:<br>
 ``||variables:racerLaunched||`` ``||logic:= 1||``<br>
 using:<br>
-``||logic:Logic||``→``||logic:0 = 0||``<br>
+``||logic:Logic||`` → ``||logic:0 = 0||``<br>
 and<br>
-``||variables:Variables||``→``||variables:racerLaunched||``<br>
+``||variables:Variables||`` → ``||variables:racerLaunched||``<br>
 ___
 The full countdown animation should be playing out in the game window and freezing on the **Press B** frame.
 
@@ -561,18 +561,18 @@ ___
 ``||controller:on B button pressed||`` block.
 ___
 3. Using the <br>
-``||logic:Logic||``→``||logic:0 = 0||``<br>
+``||logic:Logic||`` → ``||logic:0 = 0||``<br>
 and<br>
-``||variables:Variables||``→``||variables:raceStage||``<br>
+``||variables:Variables||`` → ``||variables:raceStage||``<br>
 Create the following: <br>
 ``||logic:if||`` ``||variables:raceStage||`` ``||logic:= 1 then||``
 ___
-4. Inside this if statement perform:<br>
-``||variables:set racerLaunched to 1||``<br><br>
-``||variables:set loopStartTime to||`` ``||game:time since start (ms)||``<br><br>
+4. Inside this if statement create the assignments:<br>
+► ``||variables:set racerLaunched to 1||``<br>
+► ``||variables:set loopStartTime to||`` ``||game:time since start (ms)||``<br>
 NOTE:<br>
-``||variables:loopStartTime||`` is a new variable.<br><br>
-``||game:time since start (ms)||``<br>
+► ``||variables:loopStartTime||`` is a new variable.<br>
+► ``||game:time since start (ms)||``<br>
 can be found in ``||game:Game||`` category.<br>
 ___
 5. Click the ``||logic:+||`` at the bottom of the ``||logic:if else||`` block.<br>
