@@ -105,7 +105,7 @@ ___
 6. Click the **0** inside ``||variables: set distanceRemaining to 0||``<br>
 ► Change it to **1500**.
 ___
-``||variables:distanceRemaining||`` will be used to track the distance remaining in meters before the race finishes.
+We will use ``||variables:distanceRemaining||`` to track the distance remaining in meters before the race finishes.
 
 ```blocks
 function Initialize_Variables () {
