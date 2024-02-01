@@ -122,7 +122,7 @@ ___
 ___
 3. Name the variable ``||variables:raceStage||``
 ___
-4. Click ``||loops:Ok ✓||``.
+4. Click ``||loops:Ok ✓||``
 ___
 5. Grab the <br>``||variables: set raceStage to 0||`` block.<br>
  ► Drag it into the ``||functions:Initialize_Variables||`` function block.
@@ -177,7 +177,7 @@ ___
 ___
 3. Name the variable ``||variables:drsFactor||``
 ___
-4. Click ``||loops:Ok ✓||``.
+4. Click ``||loops:Ok ✓||``
 ___
 5. Grab the <br>``||variables: set drsFactor to 0||``<br>
 block into the<br>
