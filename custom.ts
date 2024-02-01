@@ -27,7 +27,7 @@ namespace countdown {
     */
     //% block
     export function SetCountdownImage1() {
-        lights_0.setCountdownImage1()
+        lights.setCountdownImage1()
     }
 
     /**
@@ -35,7 +35,7 @@ namespace countdown {
     */
     //% block
     export function SetCountdownImage2() {
-        lights_0.setCountdownImage2()
+        lights.setCountdownImage2()
     }
 
     /**
@@ -43,7 +43,7 @@ namespace countdown {
     */
     //% block
     export function SetCountdownImage3() {
-        lights_0.setCountdownImage3()
+        lights.setCountdownImage3()
     }
 
     /**
@@ -51,7 +51,7 @@ namespace countdown {
     */
     //% block
     export function SetCountdownImage4() {
-        lights_0.setCountdownImage4()
+        lights.setCountdownImage4()
     }
 
     /**
