@@ -175,17 +175,17 @@ forever(function () {
 ```
 
 ```ghost
-function Enable_Drag_Reduction () {
+function Enable_DRS () {
     drsState = 1
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     if (raceStage > 1) {
-        Disable_Drag_Reduction()
+        Disable_DRS()
     }
 })
-function Disable_Drag_Reduction () {
+function Disable_DRS () {
     drsState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
@@ -230,26 +230,26 @@ ___
 you just created into the <br>
 ``||controller:on [ A ] button [ pressed ]||`` block.
 ___
-5. Create a new Function ``||functions:Enable_Drag_Reduction||``
+5. Create a new Function ``||functions:Enable_DRS||``
 ___
 6. Call the<br>
-``||functions:Enable_Drag_Reduction||``<br>
+``||functions:Enable_DRS||``<br>
 function from inside the ``||logic:if||`` block we set up in parts 3 - 4.
 
 ```blocks
-function Enable_Drag_Reduction () {}
+function Enable_DRS () {}
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     if (raceStage > 1) {
-        Enable_Drag_Reduction()
+        Enable_DRS()
     }
 })
 ```
 
 ## {Step 2}
-Enabling Drag Reduction
+Enabling DRS
 ---
 To show that speed boosting is occuring we need to add the following to the<br>
-``||function:Enable_Drag_Reduction||`` function.
+``||function:Enable_DRS||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
 Set ``||variables:drsState||`` to **1**
@@ -262,7 +262,7 @@ Change the image of ``||variables:myRacer||`` to
 **pink-player-drs** in the **Gallery** tab.
 
 ```blocks
-function Enable_Drag_Reduction () {
+function Enable_DRS () {
     drsState = 1
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
@@ -292,26 +292,26 @@ ___
 you just created into the <br>
 ``||controller:on [ A ] button [ pressed ]||`` block.
 ___
-5. Create a new Function ``||functions:Enable_Drag_Reduction||``
+5. Create a new Function ``||functions:Enable_DRS||``
 ___
 6. Call the<br>
-``||functions:Disable_Drag_Reduction||``<br>
+``||functions:Disable_DRS||``<br>
 function from inside the ``||logic:if||`` block we set up in parts 3 - 4.
 
 ```blocks
-function Disable_Drag_Reduction () {}
+function Disable_DRS () {}
 controller.A.onEvent(ControllerButtonEvent., function () {
     if (raceStage > 1) {
-        Disable_Drag_Reduction()
+        Disable_DRS()
     }
 })
 ```
 
 ## {Step 4}
-Disabling Drag Reduction
+Disabling DRS
 ---
 To show that speed boosting is no longer occuring we need to add the following to the<br>
-``||function:Disable_Drag_Reduction||`` function.
+``||function:Disable_DRS||`` function.
 ___
 1. Using the ``||variables:Variables||`` category,<br>
 Set ``||variables:drsState||`` to **0**
@@ -324,7 +324,7 @@ Set ``||variables:myRacer||`` image to <br>
 **pink-player** in the **gallery**
 
 ```blocks
-function Disable_Drag_Reduction () {
+function Disable_DRS () {
     drsState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
@@ -335,7 +335,7 @@ let myRacer: Sprite = null
 ```
 
 ## {Step 5}
-Creating the Drag Reduction Factor Function
+Creating the Update DRS Factor Function
 ---
 At some fixed interval, we want to update the drag reduction factor.<br>
 This will then, in turn, update the ``||variables:progressionVelocity||`` thanks to our formula in ``||functions:Update_Variables||``<br>
@@ -367,7 +367,7 @@ game.onUpdateInterval(25, function () {
 ```
 
 ## {Step 5}
-Altering the Drag Reduction Factor
+Altering the DRS Factor
 ---
 1. Create an if **else** block with the condition:<br>
 ``||logic:if||`` ``||variables:drsState||`` ``||logic:= 0 then||`` ||logic:else||``<br>
