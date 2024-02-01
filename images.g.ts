@@ -257,25 +257,6 @@ ddddbcbccbbbbb33dddddddddbcfff..bccfc..bbc..
 ....fcbccc......................cbbcfb33cc..
 ....ccccc.......................ccccf..c....
 `;
-            case "image12":
-            case "player-pink-drs":return img`
-...4ccccc.......................cbbcc.bbc...
-.243ccbbcb.....................ccbbbcbddbb..
-..24fcbbcc...cccbbddddddb......ccccfc..ddb..
-ddddbccccbcbbbdddddddddddbbcff..bccf...bdb..
-ddddbfcbcbcfb3dddddddddddbbc.....bb.....bdb.
-d99dbccbbbc6bd3333ddddddddbbb...bbbbc...6bb.
-dd9dbcc6666bdddddbbdddbbbbddddddddbbbb..ddbf
-dd6dbfcbbbbddddddddbbbffffbddddddd9ddd3333db
-dd6dbfcbbbbddddddddbbbffccdbdddddddd33b3333b
-dd9dbcc6666b33333bb3ddddbd3dddd3bbbcc....dbc
-d99dbcccbcccb3333333ddd3ddbcf...ccbb....bbc.
-dd9dbfbccbffcbddddddddddddbc.....cbb....bbc.
-ddddccbccbbbbb33dddddddddbcfff..bccfc..bbc..
-..22fcbcfc..bccbbbdd3d3bb.......cbbcc.bbbf..
-.243ccbccc......................cbbcfb33cc..
-...4ccccc.......................ccccf..c....
-`;
             case "image13":
             case "opponent-blue":return img`
 ....cccc........................cccc..bcc...
@@ -294,6 +275,25 @@ dd8bbfc888888ccb66c66fffc9666999966bb66bbbbc
 ...bccbcc..cfcccbbccbd3bbb.....ccccbc.bbbb..
 ...cccbcc......................cccbcf3dcbb..
 ....ccccc......................ccccccbbcc...
+`;
+            case "image1":
+            case "pink-player-drs":return img`
+...4ccccc.......................cbbcc.bbc...
+.243ccbbcb.....................ccbbbcbddbb..
+..24fcbbcc...cccbbddddddb......ccccfc..ddb..
+ddddbccccbcbbbdddddddddddbbcff..bccf...bdb..
+ddddbfcbcbcfb3dddddddddddbbc.....bb.....bdb.
+d99dbccbbbc6bd3333ddddddddbbb...bbbbc...6bb.
+dd9dbcc6666bdddddbbdddbbbbddddddddbbbb..ddbf
+dd6dbfcbbbbddddddddbbbffffbddddddd9ddd3333db
+dd6dbfcbbbbddddddddbbbffccdbdddddddd33b3333b
+dd9dbcc6666b33333bb3ddddbd3dddd3bbbcc....dbc
+d99dbcccbcccb3333333ddd3ddbcf...ccbb....bbc.
+dd9dbfbccbffcbddddddddddddbc.....cbb....bbc.
+ddddccbccbbbbb33dddddddddbcfff..bccfc..bbc..
+..22fcbcfc..bccbbbdd3d3bb.......cbbcc.bbbf..
+.243ccbccc......................cbbcfb33cc..
+...4ccccc.......................ccccf..c....
 `;
         }
         return null;
