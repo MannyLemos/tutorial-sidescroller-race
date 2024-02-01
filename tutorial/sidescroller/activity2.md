@@ -134,7 +134,7 @@ ___
 ___
 2. Click the ``||functions:Functions||`` category.
 ___
-3. Click ``||arrays:Make a Function...||``.
+3. Click ``||arrays:Make a Function...||``
 ___
 4. Delete the default ``||functions:doSomething||``  function name.<br>
 Type ``||functions:Race_Countdown||`` in that space.
@@ -455,7 +455,7 @@ Race_Countdown Frame 7
 The seventh frame shows 0 lights turned on and a prompt for users to **Press B**.<br>
 This frame is **IMPORTANT**<br>
 It marks the very instant that the race begins.<br>
-Pay attention to ``||variables:raceStage||`` being set and how we await ``||variables:racerLaunched = 1||``.<br>
+Pay attention to ``||variables:raceStage||`` being set and how we await ``||variables:racerLaunched = 1||``<br>
 ___
 1. Click the ``||variables:Variables||`` category.
 ___
@@ -623,7 +623,7 @@ ___
 ___
 2. Click the ``||functions:Functions||`` category.
 ___
-3. Click ``||arrays:Make a Function...||``.
+3. Click ``||arrays:Make a Function...||``
 ___
 4. Delete the default ``||functions:doSomething||``  function name.<br>
 Type ``||functions:Initialize_Overlays||`` in that space.
@@ -683,7 +683,7 @@ ___
 3. Change the name of<br>
 ``||variable:textSprite||``<br>
 to<br>
-``||variables:ElapsedTimeOverlay||``.<br>
+``||variables:ElapsedTimeOverlay||``<br>
 Note: This is a new variable.
 ___
 4. Click the ``||sprites:Sprites||`` category.
@@ -697,7 +697,7 @@ ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
 to<br>
-``||variables:ElapsedTimeOverlay||``.
+``||variables:ElapsedTimeOverlay||``
 
 ```blocks
 function Initialize_Overlays () {
@@ -721,7 +721,7 @@ ___
 3. Change the name of<br>
 ``||variable:textSprite||``<br>
 to<br>
-``||variables:VelocityOverlay||``.
+``||variables:VelocityOverlay||``
 ___
 4. Click the ``||sprites:Sprites||`` category.
 ___
@@ -734,7 +734,7 @@ ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
 to<br>
-``||variables:VelocityOverlay||``.
+``||variables:VelocityOverlay||``
 
 ```blocks
 function Initialize_Overlays () {
@@ -760,7 +760,7 @@ ___
 3. Change the name of<br>
 ``||variable:textSprite||``<br>
 to<br>
-``||variables:RemainingDistanceOverlay||``.
+``||variables:RemainingDistanceOverlay||``
 ___
 4. Click the ``||sprites:Sprites||`` category.
 ___
@@ -773,7 +773,7 @@ ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
 to<br>
-``||variables:RemainingDistanceOverlay||``.
+``||variables:RemainingDistanceOverlay||``
 
 ```blocks
 function Initialize_Overlays () {
@@ -801,9 +801,9 @@ ___
 3. Change the name of<br>
 ``||variable:textSprite||``<br>
 to<br>
-``||variables:DrsOverlay||``.
+``||variables:DrsOverlay||``
 ___
-4. Click the ``||variable:textSprite||`` to ``||variables:DrsOverlay||``.
+4. Click the ``||variable:textSprite||`` to ``||variables:DrsOverlay||``
 ___
 4. Click the ``||textsprite:+||``<br>
 ► Click the second white box and change it to **RED**.
@@ -817,7 +817,7 @@ ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
 to<br>
-``||variables:DrsOverlay||``.
+``||variables:DrsOverlay||``
 
 ```blocks
 function Initialize_Overlays () {

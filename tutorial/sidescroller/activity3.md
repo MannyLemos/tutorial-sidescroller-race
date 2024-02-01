@@ -399,7 +399,7 @@ ___
 ___
 2. Call the ``||functions:Update_Overlays||``<br>
 directly below the<br>
-``||functions:call Update_Variables||``.
+``||functions:call Update_Variables||``
 ___
 This structure means that<br>
 ``||functions:Update_Overlays||`` will be run every 25ms when<br>
