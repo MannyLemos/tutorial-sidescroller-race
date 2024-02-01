@@ -43,7 +43,7 @@
 
 * name: Enemies
 * type: tutorial
-* description: Implement enemies, crash detection
+* description: Implement enemies, and crash detection.
 * tags: opponents, crash detection, opps
 * url: https://github.com/MannyLemos/tutorial-sidescroller-race/tutorial/sidescroller/activity4
 * imageUrl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/enemies.png
