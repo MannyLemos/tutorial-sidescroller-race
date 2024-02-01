@@ -22,7 +22,8 @@
         "tutorial/sidescroller/activity3.md",
         "tutorial/sidescroller/activity4.md",
         "skillmap.md",
-        "track.ts"
+        "track.ts",
+        "lights.ts"
     ],
     "testFiles": [
         "test.ts"
