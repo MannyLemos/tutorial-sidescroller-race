@@ -242,6 +242,7 @@ ___
 function from inside the ``||logic:if||`` block we set up in parts 3 - 4.
 
 ```blocks
+function Enable_Drag_Reduction () {}
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     if (raceStage > 1) {
         Enable_Drag_Reduction()
