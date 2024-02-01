@@ -485,10 +485,8 @@ ___
 ► Drag it into the bottom of the<br>
 ``||functions:Race_Countdown||`` function block.<br>
 ► Change the variable to **New variable...** ``||variables:raceStartTime||``<br>
-► Change the assignment to ``||game:time since start (ms)||``<br>
-NOTE:<br>
-``||game:time since start (ms)||``<br>
-can be found in ``||game:Game||`` category.<br>
+► Using the ``||game:Game||`` category,<br>
+Change the assignment to ``||game:time since start (ms)||``<br>
 ___
 9. Click the ``||loops:Loops||`` category.
 ___
@@ -496,11 +494,11 @@ ___
 ► Drag it into the bottom of the<br>
 ``||functions:Race_Countdown||`` function block.<br>
 ► Change the ``||logic:true||`` to:<br>
-``||logic:racerLaunched = 1||``<br>
+``||variables:racerLaunched||`` ``||logic:= 1||``<br>
 using:<br>
-``||logic:Logic||`` → ``||logic:0 = 0||``<br>
+``||logic:Logic||``→``||logic:0 = 0||``<br>
 and<br>
-``||variables:Variables||`` → ``||variables:racerLaunched||``<br>
+``||variables:Variables||``→``||variables:racerLaunched||``<br>
 ___
 The full countdown animation should be playing out in the game window and freezing on the **Press B** frame.
 
