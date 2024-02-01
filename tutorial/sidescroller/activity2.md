@@ -667,7 +667,7 @@ Initialize_Overlays()
 ```
 
 ## {Step 14}
-Creating ElapsedTimeOverlay
+Creating the Elapsed Time Overlay
 ---
 Lets create ``||variables:ElapsedTimeOverlay||`` in our ``||functions:Initialize_Overlays||`` function.<br>
 This overlay will display the time that has passed since the race countdown finished.
@@ -705,7 +705,7 @@ function Initialize_Overlays () {
 ```
 
 ## {Step 15}
-Creating VelocityOverlay
+Creating the Velocity Overlay
 ---
 Lets create ``||variables:VelocityOverlay||`` in our ``||functions:Initialize_Overlays||`` function.<br>
 This overlay will display the current racecar velocity.
@@ -744,7 +744,7 @@ function Initialize_Overlays () {
 ```
 
 ## {Step 16}
-Creating RemainingDistanceOverlay
+Creating the Remaining Distance Overlay
 ---
 Lets create ``||variables:RemainingDistanceOverlay||`` in our ``||functions:Initialize_Overlays||`` function.<br>
 This overlay will display the distance remaining before the race finishes.
@@ -785,7 +785,7 @@ function Initialize_Overlays () {
 ```
 
 ## {Step 17}
-Creating DrsOverlay
+Creating the Drs Overlay
 ---
 Lets create ``||variables:DrsOverlay||`` in our ``||functions:Initialize_Overlays||`` function.<br>
 This overlay will be present when the DRS speed boost is active.
