@@ -561,11 +561,11 @@ ___
 ``||controller:on B button pressed||`` block.
 ___
 3. Using the <br>
-``||logic:Logic||`` → ``||logic:0 = 0||``<br>
+``||logic:Logic||``→``||logic:0 = 0||``<br>
 and<br>
-``||variables:Variables||`` → ``||variables:raceStage||``<br>
+``||variables:Variables||``→``||variables:raceStage||``<br>
 Create the following: <br>
-``||logic:if (raceStage = 1) then||``
+``||logic:if||`` ``||variables:raceStage||`` ``||logic:= 1 then||``
 ___
 4. Inside this if statement perform:<br>
 ``||variables:set racerLaunched to 1||``<br><br>
