@@ -377,7 +377,8 @@ Keeping our Racer on Screen
 ---
 1. Click the ``||sprites:Sprites||`` category.
 ___
-2. Drag the <br>``||sprites: set mySprite stay in screen <ON>||`` block into the bottom of the 
+2. Drag the <br>``||sprites:set||`` ``||variables:mySprite||`` ``||stay in screen||`` ``||loops:<ON>||``<br>
+block into the bottom of the<br>
 ``||functions:Initialize_Objects||`` function block.
 ___
 3. Click the ``||variables:mySprite||`` dropdown.<br>
