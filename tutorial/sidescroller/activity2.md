@@ -11,7 +11,7 @@ function Initialize_Variables () {
 }
 function Initialize_Objects () {
     foundation.SetBackground()
-    myRacer = sprites.create(`
+    myRacer = sprites.create(img`
     0 0 0 0 c c c c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c b b c c 0 b b c 0 0 0
     0 0 0 0 c c b b c b 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c b b b c b d d b b 0 0
     0 0 0 0 f c b b c c 0 0 0 c c c b b d d d d d d b 0 0 0 0 0 0 c c c c f c 0 0 d d b 0 0
