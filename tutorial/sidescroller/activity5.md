@@ -493,7 +493,7 @@ function Run_Finishing_Sequence () {
 }
 ```
 
-## Step 8
+## {Step 8}
 Player Overlaps Finish Line
 ---
 Now that our player will collide with a finish line sprite, we can use this event to trigger a game over sequence.
@@ -513,7 +513,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, o
 })
 ```
 
-## Step 9
+## {Step 9}
 Final Touches
 ---
 When a player wins, the player to finish line collision block will be the final piece of code that runs.
@@ -545,7 +545,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, o
 })
 ```
 
-## Step 10
+## {Step 10}
 CONGRATULATIONS!
 ---
 You have completed the race into stem make code arcade racing tutorial.
