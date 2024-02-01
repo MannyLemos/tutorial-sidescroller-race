@@ -224,8 +224,6 @@ function Initialize_Variables () {
     drsFactor = 1
     racerLaunched = 0
 }
-// @hide
-let myRacer: Sprite = null
 ```
 
 ## {Step 10}
@@ -371,7 +369,7 @@ Keeping our Racer on Screen
 ---
 1. Click the ``||sprites:Sprites||`` category.
 ___
-2. Drag the <br>``||sprites:set||`` ``||variables:mySprite||`` ``||stay in screen||`` ``||loops:<ON>||``<br>
+2. Drag the <br>``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:stay in screen||`` ``||loops:<ON>||``<br>
 block into the bottom of the<br>
 ``||functions:Initialize_Objects||`` function block.
 ___
@@ -387,4 +385,6 @@ function Initialize_Objects () {
     controller.moveSprite(myRacer, 75, 75)
     myRacer.setStayInScreen(true)
 }
+// @hide
+let myRacer: Sprite = null
 ```
