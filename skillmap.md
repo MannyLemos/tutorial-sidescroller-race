@@ -15,7 +15,7 @@
 * type: tutorial
 * description: Create the framework that our sidescrolling racer will operate within.
 * tags: functions, variables, objects
-* url: https://github.com/MannyLemos/tutorial-sidescroller-race/tutorial/sidescroller/activity1.md
+* url: https://github.com/MannyLemos/tutorial-sidescroller-race/tutorial/sidescroller/activity1
 * imageUrl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/foundation.png
 * next: sidescroller-activity2
 
