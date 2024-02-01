@@ -713,7 +713,7 @@ ___
 1. Click the ``||textsprite:TextSprite||`` category.
 ___
 2. Grab the <br>
-``||textsprite:set textSprite to text sprite "" +||`` block.<br>
+``||variables:set textSprite to||`` ``||textsprite:text sprite "" +||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.
 ___
 3. Change the name of<br>
@@ -724,7 +724,7 @@ ___
 4. Click the ``||sprites:Sprites||`` category.
 ___
 5. Grab the <br>
-``||sprites:set mySprite position to x 0 y 0||`` block.<br>
+``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
 ► Ensure **x** = **125**<br>
 ► Ensure **y** = **8**
@@ -752,7 +752,7 @@ ___
 1. Click the ``||textsprite:TextSprite||`` category.
 ___
 2. Grab the <br>
-``||textsprite:set textSprite to text sprite "" +||`` block.<br>
+``||variables:set textSprite to||`` ``||textsprite:text sprite "" +||`` block.<br>
 ► Drag it into the bottom of the``||functions:Initialize_Overlays||`` function.
 ___
 3. Change the name of<br>
@@ -763,7 +763,7 @@ ___
 4. Click the ``||sprites:Sprites||`` category.
 ___
 5. Grab the <br>
-``||sprites:set mySprite position to x 0 y 0||`` block.<br>
+``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
 ► Ensure **x** = **75**<br>
 ► Ensure **y** = **8**
@@ -793,7 +793,7 @@ ___
 1. Click the ``||textsprite:TextSprite||`` category.
 ___
 2. Grab the <br>
-``||textsprite:set textSprite to text sprite "" +||`` block.<br>
+``||variables:set textSprite to||`` ``||textsprite:text sprite "" +||`` block.<br>
 ► Drag it into the bottom of the``||functions:Initialize_Overlays||`` function.
 ___
 3. Change the name of<br>
@@ -807,7 +807,7 @@ ___
 ► Click the second white box and change it to **RED**.
 ___
 5. Grab the <br>
-``||sprites:set mySprite position to x 0 y 0||`` block.<br>
+``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
 ► Ensure **x** = **0**<br>
 ► Ensure **y** = **17**
