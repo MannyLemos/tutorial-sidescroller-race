@@ -9,7 +9,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
     progressionVelocity = 0
@@ -103,7 +103,7 @@ function Race_Countdown () {
     pauseUntil(() => racerLaunched == 1)
 }
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()
@@ -133,7 +133,7 @@ function Spawn_Opponents () {
     0 0 0 b c c b c c 0 0 c f c c c b b c c b d 3 b b b 0 0 0 0 0 c c c c b c 0 b b b b 0 0
     0 0 0 c c c b c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c b c f 3 d c b b 0 0
     0 0 0 0 c c c c c 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c c c c c c b b c c 0 0 0
-    `, OpponentSpawner, dragReductionFactor * randint(-25, -75), 0)
+    `, OpponentSpawner, drsFactor * randint(-25, -75), 0)
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite, otherSprite) {
     sprites.destroy(sprite, effects.fire, 500)
@@ -192,9 +192,9 @@ function Disable_Drag_Reduction () {
 }
 function Update_DRS_Factor () {
     if (drsState == 0) {
-        dragReductionFactor = Math.constrain(dragReductionFactor - 0.005, 1, 1.3)
+        drsFactor = Math.constrain(drsFactor - 0.005, 1, 1.3)
     } else {
-        dragReductionFactor = Math.constrain(dragReductionFactor + 0.005, 1, 1.3)
+        drsFactor = Math.constrain(drsFactor + 0.005, 1, 1.3)
     }
 }
 function Run_Finishing_Sequence () {
@@ -377,15 +377,15 @@ you just created into the <br>
 ``||functions:Update_DRS_Factor||`` function.
 ___
 3. Within the ``||logic:if||`` block write the following assignment:
-``||variables:set dragReductionFactor to||``<br>
+``||variables:set drsFactor to||``<br>
 ``||math:constrain||``<br>
-``||variables:dragReductionFactor||`` ``||math:- 0.005||``<br>
+``||variables:drsFactor||`` ``||math:- 0.005||``<br>
 ``||math:between 1 and 1.3||``<br>
 ___
 4. Within the ``||logic:else||`` block write the following assigment:
-``||variables:set dragReductionFactor to||``<br>
+``||variables:set drsFactor to||``<br>
 ``||math:constrain||``<br>
-``||variables:dragReductionFactor||`` ``||math:+ 0.005||``<br>
+``||variables:drsFactor||`` ``||math:+ 0.005||``<br>
 ``||math:between 1 and 1.3||``<br> 
 ___
 Try playing the game. If you hold A (spacebar) during the race, 
@@ -394,9 +394,9 @@ you should notice the red DRS overlay your speed slowly increasing to a peak.
 ```blocks
 function Update_DRS_Factor () {
     if (drsState == 0) {
-        dragReductionFactor = Math.constrain(dragReductionFactor - 0.005, 1, 1.3)
+        drsFactor = Math.constrain(drsFactor - 0.005, 1, 1.3)
     } else {
-        dragReductionFactor = Math.constrain(dragReductionFactor + 0.005, 1, 1.3)
+        drsFactor = Math.constrain(drsFactor + 0.005, 1, 1.3)
     }
 }
 ```

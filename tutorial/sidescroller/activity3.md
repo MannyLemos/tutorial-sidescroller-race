@@ -5,7 +5,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
     progressionVelocity = 0
@@ -97,7 +97,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
 }
@@ -142,7 +142,7 @@ function Race_Countdown () {
     pauseUntil(() => racerLaunched == 1)
 }
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()
@@ -165,7 +165,7 @@ let nextOpponentSpawnTime = 0
 let drsState = 0
 let racerLaunched = 0
 let distanceRemaining = 0
-let dragReductionFactor = 0
+let drsFactor = 0
 let timeSinceRaceStart = 0
 let raceStage = 0
 let enableText = "" + 5
@@ -173,7 +173,7 @@ let enableFloorDiv = Math.idiv(10, 3)
 ElapsedTimeOverlay = textsprite.create("", 0, 1)
 ElapsedTimeOverlay.setText("HELLO")
 myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
-progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
 mySprite = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -282,8 +282,8 @@ game.onUpdateInterval(25, function () {
 ## {Step 4}
 Update Progression Velocity
 ---
-``||variables:progressionVelocity||`` scales relative to ``||variables:dragReductionFactor||`` and ``||variables:myRacer x||``<br>
-► The higher the ``||variables:dragReductionFactor||``, the faster the ``||variables:progressionVelocity||``<br>
+``||variables:progressionVelocity||`` scales relative to ``||variables:drsFactor||`` and ``||variables:myRacer x||``<br>
+► The higher the ``||variables:drsFactor||``, the faster the ``||variables:progressionVelocity||``<br>
 ► The further to the right the racer is, the faster the ``||variables:progressionVelocity||``<br>
 ___
 1. Create the statement:<br>
@@ -296,7 +296,7 @@ ___
 
 ```blocks
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
 }
 ```
 
@@ -321,7 +321,7 @@ multiplied by<br>
 
 ```blocks
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
 }
 ```
@@ -338,7 +338,7 @@ ___
 
 ```blocks
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
 }
@@ -358,7 +358,7 @@ ___
 
 ```blocks
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()
@@ -381,7 +381,7 @@ subtract<br>
 
 ```blocks
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()

@@ -5,7 +5,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
 }
@@ -46,7 +46,7 @@ Initialize_Objects()
 ```ghost
 function Initialize_Variables () {
     raceStage = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     distanceRemaining = 1500
     racerLaunched = 0
     dragReduction = 0
@@ -120,7 +120,7 @@ let nextOpponentSpawnTime = 0
 let drsState = 0
 let racerLaunched = 0
 let distanceRemaining = 0
-let dragReductionFactor = 0
+let drsFactor = 0
 let timeSinceRaceStart = 0
 let raceStage = 0
 Initialize_Variables()

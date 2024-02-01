@@ -5,7 +5,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
     progressionVelocity = 0
@@ -81,7 +81,7 @@ function Race_Countdown () {
     pauseUntil(() => racerLaunched == 1)
 }
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()
@@ -116,7 +116,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
 }
@@ -161,7 +161,7 @@ function Race_Countdown () {
     pauseUntil(() => racerLaunched == 1)
 }
 function Update_Variables () {
-    progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+    progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()
@@ -174,7 +174,7 @@ function Update_Overlays () {
 }
 function Spawn_Opponent () {
     OpponentSpawner.setPosition(180, randint(13, 108))
-    OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, dragReductionFactor * randint(-25, -75), 0)
+    OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, drsFactor * randint(-25, -75), 0)
 }
 let ElapsedTimeOverlay = null
 let VelocityOverlay = null
@@ -188,7 +188,7 @@ let nextOpponentSpawnTime = 0
 let drsState = 0
 let racerLaunched = 0
 let distanceRemaining = 0
-let dragReductionFactor = 0
+let drsFactor = 0
 let timeSinceRaceStart = 0
 let raceStage = 0
 let enableText = "" + 5
@@ -196,7 +196,7 @@ let enableFloorDiv = Math.idiv(10, 3)
 ElapsedTimeOverlay = textsprite.create("", 0, 1)
 ElapsedTimeOverlay.setText("HELLO")
 myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
-progressionVelocity = dragReductionFactor * Math.constrain(myRacer.x, 0, 120)
+progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
 mySprite = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -424,7 +424,7 @@ Change the name to ``||sprites:OpponentSpawner||``
 ___
 6. Click the ``||sprites:vx||`` **50** value:<br>
 Change it to the expression:<br>
-``||variables:dragReductionFactor||``<br>
+``||variables:drsFactor||``<br>
 ``||math:x||``<br>
 ``||math:pick random -25 to -75||``
 ___
@@ -434,7 +434,7 @@ Change it to **0**
 ```blocks
 function Spawn_Opponent () {
     OpponentSpawner.setPosition(180, randint(13, 108))
-    OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, dragReductionFactor * randint(-25, -75), 0)
+    OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, drsFactor * randint(-25, -75), 0)
 }
 ```
 

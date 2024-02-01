@@ -5,7 +5,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
 }
@@ -22,7 +22,7 @@ let nextOpponentSpawnTime = 0
 let drsState = 0
 let racerLaunched = 0
 let distanceRemaining = 0
-let dragReductionFactor = 0
+let drsFactor = 0
 let raceStage = 0
 Initialize_Variables()
 Race_Countdown_Animation()
@@ -169,32 +169,32 @@ function Initialize_Variables () {
 ```
 
 ## {Step 8}
-dragReductionFactor Variable
+drsFactor Variable
 ---
 1. Click the ``||variables:Variables||`` category.
 ___
 2. Click <br>``||arrays:Make a Variable...||``
 ___
-3. Name the variable ``||variables:dragReductionFactor||``
+3. Name the variable ``||variables:drsFactor||``
 ___
 4. Click ``||loops:Ok ✓||``.
 ___
-5. Grab the <br>``||variables: set dragReductionFactor to 0||``<br>
+5. Grab the <br>``||variables: set drsFactor to 0||``<br>
 block into the<br>
 ``||functions:Initialize_Variables||`` function block.
 ___
 6. Click the **0** inside<br>
-``||variables: set dragReductionFactor to 0||``<br>
+``||variables: set drsFactor to 0||``<br>
 and change it to **1**.
 ___
-``||variables:dragReductionFactor||`` will be used to track the speed boosting multiplier.
+``||variables:drsFactor||`` will be used to track the speed boosting multiplier.
 
 ```blocks
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
 }
 ```
 
@@ -222,7 +222,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
 }
 ```
@@ -249,7 +249,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
 }
@@ -291,7 +291,7 @@ function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
     drsState = 0
-    dragReductionFactor = 1
+    drsFactor = 1
     racerLaunched = 0
     nextOpponentSpawnTime = 0
 }
