@@ -149,7 +149,7 @@ function Race_Countdown () {
 ```
 
 ## {Step 2}
-Calling Race_Countdown Function
+Calling th Race Countdown Function
 ---
 Lets call ``||functions:call Race_Countdown||`` before ``||functions:call Initalize_Objects||``<br>
 We do this so that our racecar is not visible during the countdown animation.
@@ -181,7 +181,7 @@ Initialize_Objects()
 ```
 
 ## {Step 3}
-Race_Countdown Frame 1
+Race Countdown Frame 1
 ---
 Our race countdown will consist of 5 lights turning on sequentially accompanied by a *BEEP* tone.<br>
 All 5 lights will then be turned off and the race  will start after players *Launch* their cars.

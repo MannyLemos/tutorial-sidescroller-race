@@ -20,7 +20,7 @@ namespace foundation {
 /**
  * Custom blocks
  */
-//% weight=100 color=#1fe3f4 icon=""
+//% weight=100 color=#76b6c4 icon=""
 namespace countdown {
     /**
     * Sets the lights-0 image as the background.
