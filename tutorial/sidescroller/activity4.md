@@ -271,9 +271,11 @@ let myRacer: Sprite = null
 ## {Step 2}
 The forever block
 ---
-The ``||loops:forever||`` will begin running in a loop after ``||loops:on start||`` completes, 
-and will not stop until the race has finished.<br>
-We will use this block to generate enemies during the race.
+The ``||loops:forever||`` block will begin running in a 
+loop after  ``||loops:on start||`` completes.<br>
+It will not stop until the race has finished.<br>
+We will use this block to generate
+enemies during the race.
 ___
 1. Click the ``||loops:Loops||`` category.
 ___
@@ -307,7 +309,7 @@ forever(function () {
 ```
 
 ## {Step 4}
-Create and Call Spawn_Opponents Function
+Create and Call the Spawn Opponents Function
 ---
 The ``||functions:Spawn_Opponents||`` generates new enemy cars.
 ___
@@ -331,7 +333,8 @@ Time between opponents
 Leaving some time between opponents spawning is important for 2 reasons.<br>
 It allows players to potentially win the game.<br>
 It prevents other infinite loops from being starved of processing time.<br><br>
-We will be pausing for a random amount of time to add a layer of complexity for players.
+We will be pausing for a random amount of time to add a layer of 
+complexity while dodging vehicles.
 ___
 1. Click the ``||loops:Loops||`` category.
 ___
@@ -389,8 +392,7 @@ ___
 3. Click the ``||sprites:mySprite||`` dropdown.<br>
 Change the name to ``||variables:OpponentSpawner||``
 ___
-4. Click the ``||sprites:x||`` **0** value:<br>
-Change it to **180**
+4. set ``||sprites:x||`` **180**
 ___
 5. Click the ``||sprites:y||`` **0** value:<br>
 Change it to the expression<br>
@@ -400,6 +402,7 @@ Change it to the expression<br>
 function Spawn_Opponent () {
     OpponentSpawner.setPosition(180, randint(13, 108))
 }
+let OpponentSpawner: Sprite = null
 ```
 
 ## {Step 7}
