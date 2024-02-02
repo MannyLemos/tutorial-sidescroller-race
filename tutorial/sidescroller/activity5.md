@@ -148,6 +148,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
     game.gameOver(false)
 })
 let myRacer: Sprite = null
+FinishLine.setVelocity(-50, 0)
 let OpponentRacer: Sprite = null
 let OpponentSpawner: Sprite = null
 let DrsOverlay: TextSprite = null
@@ -209,6 +210,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, o
     game.setGameOverScoringType(game.ScoringType.LowScore)
     game.gameOver(true)
 })
+let FinishLine: Sprite = null
+FinishLine.setVelocity(-50, 0)
 ```
 
 ## {Step 1}
