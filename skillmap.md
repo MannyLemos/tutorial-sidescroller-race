@@ -1,14 +1,12 @@
-
-
 # skillmap
 * name: Game Maker Guide
 * description: Level up your game making skills by completing the tutorials in this guide.
+* backgroundurl: /static/skillmap/space/game-maker-guide-background.png
 
 ## sidescroller
 * name: Learn to Make a Sidescrolling Racing game
 * description: A skillmap that takes you through how to build a sidescrolling racing game with countdown, opponents, drs speed boosting, and finish line.
 * completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/learn-to-make-a-platformer.pdf
-* imageUrl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/foundation.png
 
 ### sidescroller-activity1
 
