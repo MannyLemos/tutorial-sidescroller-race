@@ -57,4 +57,4 @@
 * description: Implement DRS speed boosting, finish line, and scoring.
 * tags: speed boost, finish line, pixel art
 * url: https://github.com/MannyLemos/tutorial-sidescroller-race/tutorial/sidescroller/activity5
-* imageUrl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/enemies.png
+* imageUrl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/finish.png
