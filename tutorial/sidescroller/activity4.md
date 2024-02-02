@@ -488,8 +488,7 @@ ___
 Click ``||variables:New variable...||``, and change the name to ``||variables:sprite||``
 ___
 4. Click the ``||sprites:+||`` icon.<br>
-Choose any effect you desire.<br>
-I picked fire!
+Select the fire effect.
 ___
 5. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
@@ -500,7 +499,7 @@ ___
 Click ``||variables:New variable...||``, and change the name to ``||variables:otherSprite||``
 ___
 7. Click the ``||sprites:+||`` icon.<br>
-Choose any effect you desire.<br>
+Select the fire effect.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
@@ -544,7 +543,10 @@ Display Game Over
 ► ``||game:game over <LOSE>||``<br><br>
 ___
 2. Drag them into the bottom of the<br>
- ``||sprites collision||`` block made in step 9.<br>
+ ``||sprites:on||`` ``||variables:sprite||``
+``||sprites:of Player overlaps||`` ``||variables:otherSprite||``
+``||sprites:of kind Projectile||``<br>
+block made in step 9.<br>
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
@@ -597,7 +599,7 @@ ___
 Click ``||variables:New variable...||``, and change the name to ``||variables:sprite||``
 ___
 4. Click the ``||sprites:+||`` icon.<br>
-Choose any effect you desire.<br>
+Select the fire effect.
 ___
 5. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
@@ -608,7 +610,7 @@ ___
 Click ``||variables:New variable...||``, and change the name to ``||variables:otherSprite||``
 ___
 7. Click the ``||sprites:+||`` icon.<br>
-Choose any effect you desire.<br>
+Select the fire effect.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite, otherSprite) {
