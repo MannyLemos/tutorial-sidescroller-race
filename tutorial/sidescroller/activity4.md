@@ -264,9 +264,8 @@ function Initialize_Objects () {
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
     controller.moveSprite(myRacer, 75, 75)
-    OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Opponent_Spawner)
+    OpponentSpawner = sprites.create(assets.image`temp1`, Opponent_Spawner)
 }
-let myRacer: Sprite = null
 ```
 
 
