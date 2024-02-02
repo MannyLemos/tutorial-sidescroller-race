@@ -282,9 +282,12 @@ game.onUpdateInterval(25, function () {
 ## {Step 4}
 Update Progression Velocity
 ---
-``||variables:progressionVelocity||`` scales relative to ``||variables:drsFactor||`` and ``||variables:myRacer x||``<br>
-► The higher the ``||variables:drsFactor||``, the faster the ``||variables:progressionVelocity||``<br>
-► The further to the right the racer is, the faster the ``||variables:progressionVelocity||``<br>
+``||variables:progressionVelocity||`` scales relative to
+``||variables:drsFactor||`` and ``||variables:myRacer x||``<br>
+► The higher the ``||variables:drsFactor||``, 
+the faster the ``||variables:progressionVelocity||``<br>
+► The further to the right the racer is, 
+the faster the ``||variables:progressionVelocity||``<br>
 ___
 1. Create the statement:<br>
 ``||variables:set progressionVelocity to 0||``
@@ -298,6 +301,7 @@ ___
 function Update_Variables () {
     progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
 }
+let myRacer: Sprite = null
 ```
 
 ## {Step 5}
