@@ -293,7 +293,7 @@ ___
 1. Create the statement:<br>
 ``||variables:set progressionVelocity to 0||``
 ___
-2. Replace the **0** with the expression in the hint.<br>
+2. Replace the **0** with the expression in the hint.<br><br>
 Note: ``||sprite:mySprite.x||`` can be found in the ``||sprite:Sprites||`` category
 ___
 3. Insert the statement into the ``||functions:Update_Variables||`` function block.
@@ -308,7 +308,8 @@ let myRacer: Sprite = null
 ## {Step 5}
 Scroll the Background
 ---
-In this step we will scroll our track background at half the speed of progression velocity.<br>
+In this step we will scroll our track background at half the 
+speed of progression velocity.<br><br>
 Note: We use half the speed to make the game run smoother.
 ___
 1. Click the ``||scroller:Scroller||`` category.
@@ -529,7 +530,7 @@ block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` bloc
 ___
 5. Change the **"Hello"** to:<br>
 ``||variables:distanceRemaining||``<br>
-``||math:integer /||`` **1**<br>
+``||math:integer /||`` **1**<br><br>
 Note: ``||math:integer /||``<br>
 is achieved by manipulating the<br>
 ``||math:square root x||`` block.

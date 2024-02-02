@@ -460,13 +460,13 @@ ___
 block into the bottom of the<br>
 ``||functions:Run_Finishing_Sequence||`` function block.<br>
 ► Change the sprite **name** to ``||variables:FinishLine||``<br>
-► Change the sprite **kind** to ``||sprites:Finish_Line||``<br>
+► Change the sprite **kind** to ``||sprites:Finish_Line||``<br><br>
 Note: you will need to create a new kind.
 ___
 5. Using the ``||sprites:Sprites||`` category,<br>
 set the poition of the ``||variables:FinishLine||`` sprite to:<br>
 ``||sprites:x||`` **330**<br>
-``||sprites:y||`` **60**<br>
+``||sprites:y||`` **60**<br><br>
 Note: this will place the finish line far off the right of the screen.
 ___
 6. Using the ``||scroller:Scroller||`` category,<br>

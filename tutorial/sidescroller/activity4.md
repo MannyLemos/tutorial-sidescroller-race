@@ -334,7 +334,7 @@ ___
 2. Grab the <br>
 ``||loops:pause 100 ms||`` block.<br>
 ► Drag it into the bottom of the<br>
-``||functions:Update_Variables||`` function block.<br>
+``||functions:Update_Variables||`` function block.<br><br>
 Note: Ensure the <br>
 ``||loops:pause 100 ms||``<br>
 is below the<br>
@@ -416,7 +416,7 @@ ___
 4. Click the grey box after ``||sprites:projectile||``<br>
 ► Click the **Gallery** tab<br>
 ► Click the racecar image named **opponent-blue**<br>
-► Click ``||loops:Done||``<br>
+► Click ``||loops:Done||``<br><br>
 Note: The name of a gallery asset can be determined by hovering the mouse over the asset for approximately 2 seconds.
 ___
 5. Click the ``||variables:mySprite||`` dropdown.<br>
