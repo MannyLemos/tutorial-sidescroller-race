@@ -434,7 +434,7 @@ ___
 1. Click the ``||textsprite:Text Sprite||`` category.
 ___
 2. Grab the <br>
-``||textsprite:set textSprite text ""||`` block.<br>
+``||textsprite:set||`` ``||variables:textSprite||`` ``||textsprite:text ""||`` block.<br>
 ► Drag it into the ``||functions:Update_Overlays||`` function.
 ___
 3. Click the ``||variables:textSprite||``<br>
@@ -442,7 +442,7 @@ ___
 ___
 4. Click the ``||text:Text||`` category under advanced.<br>
 ► Drag the<br>
-``||text:join "Hello" "World"||``<br>
+``||text:join "Hello" "World" - +||``<br>
 block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
 ___
 5. Change the **"Hello"** to:<br>
@@ -480,7 +480,7 @@ ___
 ___
 4. Click the ``||text:Text||`` category under advanced.<br>
 ► Drag the<br>
-``||text:join "Hello" "World"||``<br>
+``||text:join "Hello" "World" - +||``<br>
 block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
 ___
 5. Change the **"Hello"** to:<br><br>
@@ -522,7 +522,7 @@ ___
 ___
 4. Click the ``||text:Text||`` category under advanced.<br>
 ► Drag the<br>
-``||text:join "Hello" "World"||``<br>
+``||text:join "Hello" "World" - +||``<br>
 block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
 ___
 5. Change the **"Hello"** to:<br>
