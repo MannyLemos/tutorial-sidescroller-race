@@ -385,11 +385,12 @@ Lets place the opponent spawner at some random height.
 ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
-2. Drag the <br>``||sprites(variables): set mySprite position to x 0 y 0||``<br>
+2. Drag the <br>
+``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||``<br>
 block into the<br>
 ``||functions:Spawn_Opponents||`` function block.
 ___
-3. Click the ``||sprites:mySprite||`` dropdown.<br>
+3. Click the ``||variables:mySprite||`` dropdown.<br>
 Change the name to ``||variables:OpponentSpawner||``
 ___
 4. set ``||sprites:x||`` **180**
@@ -431,7 +432,7 @@ ___
 Note: The name of a gallery asset can be determined by hovering the mouse over the asset for approximately 2 seconds.
 ___
 5. Click the ``||variables:mySprite||`` dropdown.<br>
-Change the name to ``||sprites:OpponentSpawner||``
+Change the name to ``||variables:OpponentSpawner||``
 ___
 6. Click the ``||sprites:vx||`` **50** value:<br>
 Change it to the expression:<br>
@@ -443,8 +444,11 @@ ___
 Change it to **0**
 ___
 We use a random value for opponent speed to make 
-opponent dodging more complex. Further, 
-this allows opponents to collide into one another.
+opponent dodging more complexand to 
+allow opponents to collide into one another.
+This value scales with ``||variables:drsFactor||``
+which means that the higher the players speed boost,
+the faster the oncoming opponents.
 
 ```blocks
 function Spawn_Opponents () {
@@ -470,7 +474,7 @@ ___
 ► Drag it into the workspace.
 ___
 3. Click the second ``||sprites:Player||`` dropdown.<br>
-Select ``||variables:Projectile||`` from the list.
+Select ``||sprites:Projectile||`` from the list.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
@@ -485,9 +489,9 @@ ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
 2. Grab the <br>
-``||sprites:destroy mySprite||`` block.<br>
+``||sprites:destroy||`` ``||variables:mySprite||`` block.<br>
 ► Drag it into the bottom of the<br>
-``||sprite collision||`` block made in step 9.<br>
+``||sprite collision||`` block made in step 8.<br>
 ___
 3. Click the ``||variables:mySprite||`` dropdown.<br>
 ► Click ``||variables:New variable...||``<br>
@@ -499,7 +503,7 @@ ___
 5. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
 ► Drag it into the bottom of the<br>
-``||sprite collision||`` block made in step 9.<br>
+``||sprite collision||`` block made in step 8.<br>
 ___
 6. Click the ``||variables:mySprite||`` dropdown.<br>
 ► Click ``||variables:New variable...||``<br>
@@ -522,7 +526,7 @@ Update Race stage then Pause
 ___
 2. Grab the <br>``||variables: set raceStage to 0||`` block.<br>
  ► Drag it into the bottom of the<br>
- ``||sprite collision||`` block made in step 9.<br>
+ ``||sprite collision||`` block made in step 8.<br>
  ► Change the **0** to **4**
 ___
 3. Click the ``||loops:Loops||`` category.
@@ -530,7 +534,7 @@ ___
 4. Grab the <br>
 ``||loops:pause 100 ms||`` block.<br>
  ► Drag it into the bottom of the<br>
- ``||sprite collision||`` block made in step 9.<br>
+ ``||sprite collision||`` block made in step 8.<br>
  ► Change the **100 ms** to **1000 ms**
 
 ```blocks
@@ -550,10 +554,7 @@ Display Game Over
 ► ``||game:game over <LOSE>||``<br><br>
 ___
 2. Drag them into the bottom of the<br>
- ``||sprites:on||`` ``||variables:sprite||``
-``||sprites:of Player overlaps||`` ``||variables:otherSprite||``
-``||sprites:of kind Projectile||``<br>
-block made in step 9.<br>
+ ``||sprite collision||`` block made in step 8.<br>
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
@@ -576,14 +577,16 @@ ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
 2. Grab the <br>
-``||sprites:on sprite of Player overlaps otherSprite of kind Player||`` block.<br>
+``||sprites:on||`` ``||variables:sprite||``
+``||sprites:of Player overlaps||`` ``||variables:otherSprite||``
+``||sprites:of kind Player||`` block.<br>
 ► Drag it into the workspace.
 ___
 3. Click the first ``||sprites:Player||`` dropdown.<br>
 Select ``||variables:Projectile||`` from the list.
 ___
 4. Click the second ``||sprites:Player||`` dropdown.<br>
-Select ``||variables:Projectile||`` from the list.
+Select ``||sprites:Projectile||`` from the list.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite, otherSprite) {
@@ -600,10 +603,10 @@ ___
 2. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
 ► Drag it into the bottom of the<br>
-``||sprite collision||`` block made in step 13.<br>
+``||sprite collision||`` block made in step 12.<br>
 ___
 3. Click the ``||variables:mySprite||`` dropdown.<br>
-Click ``||variables:New variable...||``, and change the name to ``||variables:sprite||``
+► Change the name to ``||variables:sprite||``
 ___
 4. Click the ``||sprites:+||`` icon.<br>
 ► Select the fire effect.
@@ -611,10 +614,9 @@ ___
 5. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
 ► Drag it into the bottom of the<br>
-``||sprite collision||`` block made in step 13.<br>
+``||sprite collision||`` block made in step 12.<br>
 ___
 6. Click the ``||variables:mySprite||`` dropdown.<br>
-► Click ``||variables:New variable...||``<br>
 ► Change the name to ``||variables:otherSprite||``
 ___
 7. Click the ``||sprites:+||`` icon.<br>
