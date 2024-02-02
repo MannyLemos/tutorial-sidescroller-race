@@ -3,6 +3,7 @@
 * description: A skillmap that takes you through how to build a sidescrolling racing game with countdown, opponents, drs speed boosting, and finish line.
 * completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/learn-to-make-a-platformer.pdf
 * backgroundurl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/big-track.png
+* bannerUrl: https://raw.githubusercontent.com/MannyLemos/tutorial-sidescroller-race/master/images/banner.png
 
 ## sidescroller
 * name: Learn to Make a Sidescrolling Racing game
