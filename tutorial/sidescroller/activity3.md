@@ -297,6 +297,11 @@ ___
 Note: ``||sprites:mySprite.x||`` can be found in the ``||sprite:Sprites||`` category
 ___
 3. Insert the statement into the ``||functions:Update_Variables||`` function block.
+___
+This equation make progression velocity scale relative to the ``||variables:drsFactor||``
+and the players forward horizontal position. 
+The further to the right, the faster the speed, 
+and the higher the risk of crash.
 
 ```blocks
 function Update_Variables () {
