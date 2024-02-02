@@ -493,7 +493,7 @@ to represent kilometers per hour
 
 ```blocks
 function Update_Overlays () {
-    ElapsedTimeOverlay.setText("" + timeSinceRaceStart / 1000 + "s")
+    ElapsedTimeOverlay.setText("" + (timeSinceRaceStart / 1000) + "s")
     VelocityOverlay.setText("" + Math.imul(progressionVelocity, 3.6) + "kph")
 }
 let ElapsedTimeOverlay: TextSprite = null
@@ -533,8 +533,8 @@ to represent meters
 ```blocks
 function Update_Overlays () {
     ElapsedTimeOverlay.setText("" + (timeSinceRaceStart / 1000) + "s")
-    VelocityOverlay.setText("" + (progressionVelocity*3.6)) + "kph")
-    RemainingDistanceOverlay.setText("" + distanceRemaining + "m")
+    VelocityOverlay.setText("" + Math.imul(progressionVelocity, 3.6) + "kph")
+    RemainingDistanceOverlay.setText("" + Math.idiv(distanceRemaining, 1) + "m")
 }
 let ElapsedTimeOverlay: TextSprite = null
 let VelocityOverlay: TextSprite = null
