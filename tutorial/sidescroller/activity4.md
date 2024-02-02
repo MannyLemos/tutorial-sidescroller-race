@@ -421,7 +421,8 @@ block into the bottom of the<br>
 ``||functions:Spawn_Opponents||`` function block.
 ___
 3. Click the ``||variables:projectile||`` dropdown.<br>
-Click ``||variables:New variable...||``, and change the name to ``||variables:OpponentRacer||``
+► Click ``||variables:New variable...||``<br>
+► Change the name to ``||variables:OpponentRacer||``
 ___
 4. Click the grey box after ``||sprites:projectile||``<br>
 ► Click the **Gallery** tab<br>
@@ -440,6 +441,10 @@ Change it to the expression:<br>
 ___
 7. Click the ``||sprites:vy||`` **50** value:<br>
 Change it to **0**
+___
+We use a random value for opponent speed to make 
+opponent dodging more complex. Further, 
+this allows opponents to collide into one another.
 
 ```blocks
 function Spawn_Opponents () {
@@ -477,7 +482,7 @@ Destroy the sprites on Crash
 ---
 After the sprites collide we want to destroy both.
 ___
-1. 1. Click the ``||sprites:Sprites||`` category.
+1. Click the ``||sprites:Sprites||`` category.
 ___
 2. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
@@ -485,10 +490,11 @@ ___
 ``||sprite collision||`` block made in step 9.<br>
 ___
 3. Click the ``||variables:mySprite||`` dropdown.<br>
-Click ``||variables:New variable...||``, and change the name to ``||variables:sprite||``
+► Click ``||variables:New variable...||``<br>
+► Change the name to ``||variables:sprite||``
 ___
 4. Click the ``||sprites:+||`` icon.<br>
-Select the fire effect.
+► Select the fire effect.
 ___
 5. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
@@ -496,10 +502,11 @@ ___
 ``||sprite collision||`` block made in step 9.<br>
 ___
 6. Click the ``||variables:mySprite||`` dropdown.<br>
-Click ``||variables:New variable...||``, and change the name to ``||variables:otherSprite||``
+► Click ``||variables:New variable...||``<br>
+► Change the name to ``||variables:otherSprite||``
 ___
 7. Click the ``||sprites:+||`` icon.<br>
-Select the fire effect.
+► Select the fire effect.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
@@ -588,7 +595,7 @@ Destroy the sprites on Crash
 ---
 After the sprites collide we want to destroy both.
 ___
-1. 1. Click the ``||sprites:Sprites||`` category.
+1. Click the ``||sprites:Sprites||`` category.
 ___
 2. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
@@ -599,7 +606,7 @@ ___
 Click ``||variables:New variable...||``, and change the name to ``||variables:sprite||``
 ___
 4. Click the ``||sprites:+||`` icon.<br>
-Select the fire effect.
+► Select the fire effect.
 ___
 5. Grab the <br>
 ``||sprites:destroy mySprite||`` block.<br>
@@ -607,10 +614,11 @@ ___
 ``||sprite collision||`` block made in step 13.<br>
 ___
 6. Click the ``||variables:mySprite||`` dropdown.<br>
-Click ``||variables:New variable...||``, and change the name to ``||variables:otherSprite||``
+► Click ``||variables:New variable...||``<br>
+► Change the name to ``||variables:otherSprite||``
 ___
 7. Click the ``||sprites:+||`` icon.<br>
-Select the fire effect.
+► Select the fire effect.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Projectile, function (sprite, otherSprite) {
