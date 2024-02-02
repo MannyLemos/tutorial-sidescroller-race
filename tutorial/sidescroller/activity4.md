@@ -265,7 +265,7 @@ function Initialize_Objects () {
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Opponent_Spawner)
 }
 let myRacer: Sprite = null
-let Projectile_Spawner = SpriteKind.create()
+const Projectile_Spawner = SpriteKind.create()
 ```
 
 
