@@ -255,7 +255,7 @@ game.onUpdateInterval(25, function () {
 ```
 
 ## {Step 3}
-Create and Call Update_Variables Function
+Create and Call Update Variables Function
 ---
 In activity 1, we set about a number of variables.
 Recall that variables are expected to change during the race.
@@ -294,7 +294,7 @@ ___
 ``||variables:set progressionVelocity to 0||``
 ___
 2. Replace the **0** with the expression in the hint.<br><br>
-Note: ``||sprites:mySprite.x||`` can be found in the ``||sprite:Sprites||`` category
+Note: ``||sprites:mySprite.x||`` can be found in the ``||sprites:Sprites||`` category
 ___
 3. Insert the statement into the ``||functions:Update_Variables||`` function block.
 
@@ -318,11 +318,11 @@ ___
 ``||scroller:scroll background with vx -50 vy -50 +||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Update_Variables||`` function block.
 ___
-3. Change the ``||scroller:vy||`` from **-50** to **0**.
-___
-4. Change the ``||scroller:vx||`` from **-50** to:<br><br>
+3. Change the ``||scroller:vx||`` from **-50** to:<br><br>
 ``||variables:progressionVelocity||``<br>
 ``||math:x||`` **-0.5**
+___
+4. Change the ``||scroller:vy||`` from **-50** to **0**.
 
 ```blocks
 function Update_Variables () {
@@ -397,7 +397,7 @@ let myRacer: Sprite = null
 ```
 
 ## {Step 9}
-Create and Call Update_Overlays Function
+Create and Call Update Overlays Function
 ---
 In activity 2, we created several ``||textsprite:text sprite||`` overlays.<br>
 These overlays need to be updated so that things like velocity and distance are accurate.
@@ -409,8 +409,8 @@ directly below the<br>
 ``||functions:call Update_Variables||``
 ___
 This structure means that<br>
-``||functions:Update_Overlays||`` will be run every 25ms when<br>
-``||variables:raceStage||`` ``||logic:= 2||``
+``||functions:Update_Overlays||`` will be run every<br>
+25ms when ``||variables:raceStage||`` ``||logic:= 2||``
 
 ```blocks
 // @hide
