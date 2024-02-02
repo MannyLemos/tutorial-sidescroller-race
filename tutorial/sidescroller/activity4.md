@@ -413,7 +413,10 @@ we can create the opponent sprite.
 ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
-2. Drag the <br>``||sprites:set projectile to projectile from mySprite with vx 50 vy 50||``<br>
+2. Drag the <br>
+``||variables:set projectile to||`` 
+``||sprites:projectile from||`` ``||variables:mySprite||``
+``||sprites:with vx 50 vy 50||``<br>
 block into the bottom of the<br>
 ``||functions:Spawn_Opponents||`` function block.
 ___
@@ -443,6 +446,7 @@ function Spawn_Opponents () {
     OpponentSpawner.setPosition(180, randint(13, 108))
     OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, drsFactor * randint(-25, -75), 0)
 }
+let OpponentSpawner: Sprite = null
 ```
 
 ## {Step 8}
