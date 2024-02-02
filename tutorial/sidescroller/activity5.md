@@ -175,6 +175,10 @@ forever(function () {
 ```
 
 ```ghost
+namespace SpriteKind {
+    export const Projectile_Spawner = SpriteKind.create()
+    export const Finish_Line = SpriteKind.create()
+}
 function Enable_DRS () {
     drsState = 1
     DrsOverlay.setText("DRS")
@@ -504,14 +508,16 @@ ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
 2. Grab the <br>
-``||sprites:on sprite of Player overlaps otherSprite of kind Player||`` block.<br>
+``||sprites:on||`` ``||variables:sprite||``
+``||sprites:of Player overlaps||`` ``||variables:otherSprite||``
+``||sprites:of kind Player||`` block.<br>
 ► Drag it into the workspace.
 ___
 3. Click the second ``||sprites:Player||`` dropdown.<br>
 Select ``||variables:Finish_Line||`` from the list.
 
 ```blocks
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, Finish_Line, function (sprite, otherSprite) {
 })
 ```
 
