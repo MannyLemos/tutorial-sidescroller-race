@@ -387,7 +387,7 @@ function Race_Countdown () {
 ## {Step 8}
 Race Countdown Frame 6
 ---
-The sixth frame shows 5 lights turned on.<br>
+The sixth frame shows 5 lights turned on.<br><br>
 Note: In this stage we wait a random amount of time between 200ms and 1500ms after the 5 lights are turned on. 
 This is to prevent racers from tying to press the launch button based on timing alone.
 ___
@@ -577,7 +577,7 @@ can be found in ``||game:Game||`` category.<br>
 ___
 5. Click the ``||logic:+||`` at the bottom of the ``||logic:if else||`` block.<br>
 <br>
-The ``||logic:else||`` should turn into an<br>
+The ``||logic:else||`` should turn into:<br>
 ``||logic:else if <true> then||``
 ___
 6. Using the <br>
@@ -587,7 +587,7 @@ and<br>
 Create the following: <br>
 ``||logic:else if||`` ``||variables:raceStage||`` ``||logic:= 0 then||``
 ___
-7. Inside this `||logic:else if||`` statement create the assignments:<br>
+7. Inside this ``||logic:else if||`` statement create the assignments:<br>
 ► ``||variables:set raceStage = 3||``<br><br>
 ► ``||game:use message "FALSE START" for <LOSE>||``<br><br>
 ► ``||game:game over <LOSE>||``<br><br>
@@ -640,7 +640,7 @@ function Initialize_Overlays () {
 ## {Step 13}
 Calling Initialize Overlays Function
 ---
-Lets call ``||functions:call Initialize_Overlays||`` at the end of our ``||loops:on start||`` block..
+Lets ``||functions:call Initialize_Overlays||`` at the end of our ``||loops:on start||`` block..
 ___
 1. Expand the ``||advanced:Advanced||`` dropdown.
 ___
@@ -683,7 +683,7 @@ ___
 3. Change the name of<br>
 ``||variable:textSprite||``<br>
 to<br>
-``||variables:ElapsedTimeOverlay||``<br>
+``||variables:ElapsedTimeOverlay||``<br><br>
 Note: This is a new variable.
 ___
 4. Click the ``||sprites:Sprites||`` category.

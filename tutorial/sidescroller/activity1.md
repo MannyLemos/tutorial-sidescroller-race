@@ -50,7 +50,7 @@ To achieve this we will use ``||functions:Functions||`` that are called from the
 ## {Step 3}
 Creating a Function
 ---
-Note: All ``||functions:Functions||`` created for this game will use *Upper_Snake_Case*
+All ``||functions:Functions||`` created for this game will use *Upper_Snake_Case*
 ___
 1. Expand the ``||advanced:Advanced||`` dropdown.
 ___
@@ -88,7 +88,7 @@ Initialize_Variables()
 ## {Step 5}
 Creating and Setting a Variable
 ---
-Note: All ``||variables:Variables||`` created for this game will use *lowerCamelCase*.
+All ``||variables:Variables||`` created for this game will use *lowerCamelCase*.
 ___
 1. Click the ``||variables:Variables||`` category.
 ___
@@ -325,7 +325,7 @@ ___
 4. Click the grey box<br>
 ► Click the **Gallery** tab<br>
 ► Click the racecar image named **player-pink**<br>
-► Click ``||loops:Done||``<br>
+► Click ``||loops:Done||``<br><br>
 Note: The name of a gallery asset can be determined by hovering the mouse over the asset for approximately 2 seconds.
 ___
 A pink racecar should be present in your game window!
