@@ -258,14 +258,13 @@ ___
 ► Change the name to ``||sprites:Opponent_Spawner||``
 
 ```blocks
-// @hide
-export const Finish_Line = SpriteKind.create()
 function Initialize_Objects () {
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
     controller.moveSprite(myRacer, 75, 75)
     OpponentSpawner = sprites.create(assets.image`temp1`, Opponent_Spawner)
 }
+let myRacer: Sprite = null
 ```
 
 
