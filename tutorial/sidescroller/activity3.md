@@ -328,6 +328,7 @@ function Update_Variables () {
     progressionVelocity = drsFactor * Math.constrain(myRacer.x, 0, 120)
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
 }
+let myRacer: Sprite = null
 ```
 
 ## {Step 6}
@@ -346,6 +347,7 @@ function Update_Variables () {
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
 }
+let myRacer: Sprite = null
 ```
 
 ## {Step 7}
@@ -368,6 +370,7 @@ function Update_Variables () {
     loopStartTime = game.runtime()
     timeSinceRaceStart = game.runtime() - raceStartTime
 }
+let myRacer: Sprite = null
 ```
 
 ## {Step 8}
@@ -391,6 +394,7 @@ function Update_Variables () {
     loopStartTime = game.runtime()
     timeSinceRaceStart = game.runtime() - raceStartTime
 }
+let myRacer: Sprite = null
 ```
 
 ## {Step 9}
@@ -454,6 +458,7 @@ to represent seconds
 function Update_Overlays () {
     ElapsedTimeOverlay.setText("" + timeSinceRaceStart / 1000 + "s")
 }
+let ElapsedTimeOverlay: TextSprite = null
 ```
 
 ## {Step 11}
@@ -491,6 +496,8 @@ function Update_Overlays () {
     ElapsedTimeOverlay.setText("" + timeSinceRaceStart / 1000 + "s")
     VelocityOverlay.setText("" + Math.imul(progressionVelocity, 3.6) + "kph")
 }
+let ElapsedTimeOverlay: TextSprite = null
+let VelocityOverlay: TextSprite = null
 ```
 
 ## {Step 12}
@@ -529,4 +536,7 @@ function Update_Overlays () {
     VelocityOverlay.setText("" + (progressionVelocity*3.6)) + "kph")
     RemainingDistanceOverlay.setText("" + distanceRemaining + "m")
 }
+let ElapsedTimeOverlay: TextSprite = null
+let VelocityOverlay: TextSprite = null
+let RemainingDistanceOverlay: TextSprite = null
 ```
