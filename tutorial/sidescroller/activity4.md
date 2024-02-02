@@ -459,7 +459,9 @@ ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
 2. Grab the <br>
-``||sprites:on sprite of Player overlaps otherSprite of kind Player||`` block.<br>
+``||sprites:on||`` ``||variables:sprite||``
+``||sprites:of Player overlaps||`` ``||variables:otherSprite||``
+``||sprites:of kind Player||`` block.<br>
 ► Drag it into the workspace.
 ___
 3. Click the second ``||sprites:Player||`` dropdown.<br>
@@ -538,11 +540,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 Display Game Over
 ---
 1. Create the following statements:<br>
-► ``||game:use message "FALSE START" for <LOSE>||``<br><br>
+► ``||game:use message "YOU CRASHED!" for <LOSE>||``<br><br>
 ► ``||game:game over <LOSE>||``<br><br>
 ___
 2. Drag them into the bottom of the<br>
- ``||sprite collision||`` block made in step 9.<br>
+ ``||sprites collision||`` block made in step 9.<br>
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
