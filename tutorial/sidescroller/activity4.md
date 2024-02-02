@@ -341,7 +341,7 @@ ___
 2. Grab the <br>
 ``||loops:pause 100 ms||`` block.<br>
 ► Drag it into the bottom of the<br>
-``||functions:Update_Variables||`` function block.<br><br>
+``||loops:forever||`` block.<br><br>
 Note: Ensure the <br>
 ``||loops:pause 100 ms||``<br>
 is below the<br>
