@@ -172,7 +172,7 @@ function Update_Overlays () {
     VelocityOverlay.setText("" + Math.imul(progressionVelocity, 3.6) + "kph")
     RemainingDistanceOverlay.setText("" + Math.idiv(distanceRemaining, 1) + "m")
 }
-function Spawn_Opponent () {
+function Spawn_Opponents () {
     OpponentSpawner.setPosition(180, randint(13, 108))
     OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, drsFactor * randint(-25, -75), 0)
 }
@@ -399,7 +399,7 @@ Change it to the expression<br>
 ``||math:pick random 13 to 108||``
 
 ```blocks
-function Spawn_Opponent () {
+function Spawn_Opponents () {
     OpponentSpawner.setPosition(180, randint(13, 108))
 }
 let OpponentSpawner: Sprite = null
@@ -439,7 +439,7 @@ ___
 Change it to **0**
 
 ```blocks
-function Spawn_Opponent () {
+function Spawn_Opponents () {
     OpponentSpawner.setPosition(180, randint(13, 108))
     OpponentRacer = sprites.createProjectileFromSprite(assets.image`opponent-blue`, OpponentSpawner, drsFactor * randint(-25, -75), 0)
 }
