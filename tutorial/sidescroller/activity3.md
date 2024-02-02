@@ -404,8 +404,8 @@ These overlays need to be updated so that things like velocity and distance are 
 ___
 1. Create a new Function ``||functions:Update_Overlays||``
 ___
-2. Call the ``||functions:Update_Overlays||`` function<br>
-from inside the ``||game:on game update every 25 ms||`` block,
+2. Call the ``||functions:Update_Overlays||`` function from inside the<br>
+``||game:on game update every 25 ms||`` block,
 directly below the<br>
 ``||functions:call Update_Variables||`` function block.
 ___
