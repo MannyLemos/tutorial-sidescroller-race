@@ -691,8 +691,8 @@ ___
 5. Grab the <br>
 ``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
-► Ensure **x** = **0**<br>
-► Ensure **y** = **8**
+► Set **x** = **0**<br>
+► Set **y** = **8**
 ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
@@ -729,8 +729,8 @@ ___
 5. Grab the <br>
 ``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
-► Ensure **x** = **125**<br>
-► Ensure **y** = **8**
+► Set **x** = **125**<br>
+► Set **y** = **8**
 ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
@@ -770,8 +770,8 @@ ___
 5. Grab the <br>
 ``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
-► Ensure **x** = **75**<br>
-► Ensure **y** = **8**
+► Set **x** = **75**<br>
+► Set **y** = **8**
 ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
@@ -817,8 +817,8 @@ ___
 5. Grab the <br>
 ``||sprites:set||`` ``||variables:mySprite||`` ``||sprites:position to x 0 y 0||`` block.<br>
 ► Drag it into the bottom of the ``||functions:Initialize_Overlays||`` function.<br>
-► Ensure **x** = **0**<br>
-► Ensure **y** = **17**
+► Set **x** = **0**<br>
+► Set **y** = **17**
 ___
 6. Change the name of<br>
 ``||variable:mySprite||``<br>
