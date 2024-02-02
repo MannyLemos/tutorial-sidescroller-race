@@ -560,17 +560,17 @@ ___
 ► Drag it into the<br>
 ``||controller:on B button pressed||`` block.
 ___
-3. Using the <br>
+3. Using<br>
 ``||logic:Logic||`` → ``||logic:0 = 0||``<br>
 and<br>
-``||variables:Variables||`` → ``||variables:raceStage||``<br>
-Create the following: <br>
+``||variables:Variables||`` → ``||variables:raceStage||``<br><br>
+Create the following logic: <br>
 ``||logic:if||`` ``||variables:raceStage||`` ``||logic:= 1 then||``
 ___
 4. Inside this if statement create the assignments:<br>
 ► ``||variables:set racerLaunched to 1||``<br>
-► ``||variables:set loopStartTime to||`` ``||game:time since start (ms)||``<br>
-NOTE:<br>
+► ``||variables:set loopStartTime to||`` ``||game:time since start (ms)||``<br><br>
+Note:<br>
 ► ``||variables:loopStartTime||`` is a new variable.<br>
 ► ``||game:time since start (ms)||``<br>
 can be found in ``||game:Game||`` category.<br>
@@ -591,7 +591,7 @@ ___
 ► ``||variables:set raceStage = 3||``<br><br>
 ► ``||game:use message "FALSE START" for <LOSE>||``<br><br>
 ► ``||game:game over <LOSE>||``<br><br>
-NOTE: <br>
+Note: <br>
 ``||game:use message "FALSE START" for <LOSE>||``<br>
 and<br>
 ``||game:game over <LOSE>||``<br>

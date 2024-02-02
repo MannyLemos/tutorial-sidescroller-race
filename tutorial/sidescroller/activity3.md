@@ -257,9 +257,10 @@ game.onUpdateInterval(25, function () {
 ## {Step 3}
 Create and Call Update_Variables Function
 ---
-In activity 1, we set about a number of variables.<br>
-Recall that variables are expected to change during the race.<br>
-``||functions:Update_Variables||`` performs some of these updates.
+In activity 1, we set about a number of variables.
+Recall that variables are expected to change during the race.
+``||functions:Update_Variables||`` performs some of these updates.<br>
+Lets set it up!
 ___
 1. Create a new Function ``||functions:Update_Variables||``
 ___
