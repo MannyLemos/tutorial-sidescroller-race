@@ -1,6 +1,10 @@
 # Enemies
 
 ```template
+namespace SpriteKind {
+    export const Projectile_Spawner = SpriteKind.create()
+    export const Finish_Line = SpriteKind.create()
+}
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
@@ -265,7 +269,6 @@ function Initialize_Objects () {
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Opponent_Spawner)
 }
 let myRacer: Sprite = null
-const Projectile_Spawner = SpriteKind.create()
 ```
 
 
