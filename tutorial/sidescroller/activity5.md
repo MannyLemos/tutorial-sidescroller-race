@@ -540,7 +540,7 @@ get the<br>
 ``||game:game over WIN||`` block.
 
 ```blocks
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, Finish_Line, function (sprite, otherSprite) {
     info.setScore(timeSinceRaceStart)
     game.setGameOverScoringType(game.ScoringType.LowScore)
     game.setGameOverMessage(true, "YOU WIN!")
