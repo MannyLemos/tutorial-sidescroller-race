@@ -291,7 +291,7 @@ ___
 you just created into the <br>
 ``||controller:on [ A ] button [ pressed ]||`` block.
 ___
-5. Create a new Function ``||functions:Enable_DRS||``
+5. Create a new Function ``||functions:Disable_DRS||``
 ___
 6. Call the<br>
 ``||functions:Disable_DRS||``<br>
@@ -318,7 +318,7 @@ ___
 2. Using the ``||textsprite:Text Sprite||`` category,<br>
 Set ``||variables:DrsOverlay||`` to **""**
 ___
-3. Using the ``||sprite:Sprites||`` category,<br>
+3. Using the ``||sprites:Sprites||`` category,<br>
 Set ``||variables:myRacer||`` image to <br>
 **pink-player** in the **gallery**
 
@@ -327,9 +327,8 @@ function Disable_DRS () {
     drsState = 0
     DrsOverlay.setText("")
     myRacer.setImage(assets.image`player-pink`)
-}
-// @hide 
-let DrsOverlay = textsprite.create("", 0, 2) 
+} 
+let DrsOverlay: TextSprite = null
 let myRacer: Sprite = null
 ```
 
@@ -455,7 +454,8 @@ block into the<br>
 ___
 3. Click the ``||sprites:Sprites||`` category.
 ___
-4. Drag the <br>``||variables(sprites): set mySprite to sprite [ ] of kind Player||``<br>
+4. Drag the <br>
+``||variables: set mySprite to||`` ``||sprites:sprite [ ] of kind Player||``<br>
 block into the bottom of the<br>
 ``||functions:Run_Finishing_Sequence||`` function block.<br>
 ► Change the sprite **name** to ``||variables:FinishLine||``<br>
@@ -485,11 +485,12 @@ the player should hit the finish line sprite just after they have passed the fin
 ```blocks
 function Run_Finishing_Sequence () {
     finish.SetFinishBackground()
-    FinishLine = sprites.create(assets.image`finish-sprite`, SpriteKind.Finish_Line)
+    FinishLine = sprites.create(assets.image`finish-sprite`, Finish_Line)
     FinishLine.setPosition(330, 60)
     scroller.scrollBackgroundWithSpeed(-50, 0)
     FinishLine.setVelocity(-50, 0)
 }
+let FinishLine: Sprite = null
 ```
 
 ## {Step 9}
