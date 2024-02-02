@@ -447,15 +447,13 @@ block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` bloc
 ___
 5. Change the **"Hello"** to:<br>
 ``||variables:timeSinceRaceStart||``<br>
-``||math:/||``<br>
-**1000**
+``||math:/||`` **1000**
 ___
 6. Change the **"World"** to **s**<br>
 to represent seconds
 ___
-We integer multiply ``||variables:progressionVelocity||`` 
-by 3.6 to convert m/s to kph, and to truncate any decimal digits.<br>
-e.g. 1.811 m/s becomes 7 kph
+We divide ``||variables:ElapsedTimeOverlay||`` 
+by 1000 to convert milliseconds to seconds.
 
 ```blocks
 function Update_Overlays () {
