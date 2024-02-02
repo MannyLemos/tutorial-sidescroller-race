@@ -244,23 +244,30 @@ Lets set it up.
 ___
 1. Click the ``||sprites:Sprites||`` category.
 ___
-2. Drag the <br>``||variables(sprites): set mySprite to sprite [ ] of kind Player||``<br>
+2. Drag the <br>
+``||variables:set mySprite to||`` ``||sprites:sprite [ ] of kind Player||``<br>
 block into the bottom of the<br>
 ``||functions:Initialize_Objects||`` function block.
 ___
 3. Click the ``||variables:mySprite||`` dropdown.<br>
-Click ``||variables:New variable...||``, and change the name to ``||variables:OpponentSpawner||``
+► Click ``||variables:New variable...||``<br>
+► Change the name to ``||variables:OpponentSpawner||``
 ___
 4. Click the ``||sprites:Player||`` dropdown.<br>
-Click ``||sprites:Add a new kind...||``, and change the name to ``||sprites:Opponent_Spawner||``
+► Click ``||sprites:Add a new kind...||``<br>
+► Change the name to ``||sprites:Opponent_Spawner||``
 
 ```blocks
+namespace SpriteKind {
+    export const Projectile_Spawner = SpriteKind.create()
+}
 function Initialize_Objects () {
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
     controller.moveSprite(myRacer, 75, 75)
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Opponent_Spawner)
 }
+let myRacer: Sprite = null
 ```
 
 
