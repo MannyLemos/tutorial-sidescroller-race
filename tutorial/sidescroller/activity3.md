@@ -444,7 +444,7 @@ ___
 4. Click the ``||text:Text||`` category under advanced.<br>
 ► Drag the<br>
 ``||text:join "Hello" "World"||``<br>
-block in the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
+block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
 ___
 5. Change the **"Hello"** to:<br>
 ``||variables:timeSinceRaceStart||``<br>
@@ -453,6 +453,10 @@ ___
 ___
 6. Change the **"World"** to **s**<br>
 to represent seconds
+___
+We integer multiply ``||variables:progressionVelocity||`` 
+by 3.6 to convert m/s to kph, and to truncate any decimal digits.<br>
+e.g. 1.811 m/s becomes 7 kph
 
 ```blocks
 function Update_Overlays () {
@@ -478,18 +482,21 @@ ___
 4. Click the ``||text:Text||`` category under advanced.<br>
 ► Drag the<br>
 ``||text:join "Hello" "World"||``<br>
-block in the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
+block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
 ___
-5. Change the **"Hello"** to:<br>
+5. Change the **"Hello"** to:<br><br>
 ``||variables:progressionVelocity||``<br>
-``||math:integer x||``<br>
-**3.6**<br>
+``||math:integer x||`` **3.6**<br><br>
 Note: ``||math:integer x||``<br>
 is achieved by manipulating the<br>
 ``||math:square root x||`` block.
 ___
 6. Change the **"World"** to **kph**<br>
 to represent kilometers per hour
+___
+We integer multiply ``||variables:progressionVelocity||`` 
+by 3.6 to convert m/s to kph, and to truncate any decimal digits.<br>
+e.g. 1.811 m/s becomes 7 kph
 
 ```blocks
 function Update_Overlays () {
@@ -517,18 +524,22 @@ ___
 4. Click the ``||text:Text||`` category under advanced.<br>
 ► Drag the<br>
 ``||text:join "Hello" "World"||``<br>
-block in the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
+block into the ``||textsprite:" "||`` of the ``||textsprite:Text Sprite||`` block we created in the previous step.
 ___
 5. Change the **"Hello"** to:<br>
 ``||variables:distanceRemaining||``<br>
-``||math:integer /||``<br>
-**1**
+``||math:integer /||`` **1**<br>
 Note: ``||math:integer /||``<br>
 is achieved by manipulating the<br>
 ``||math:square root x||`` block.
 ___
 6. Change the **"World"** to **m**<br>
 to represent meters
+___
+We integer divide ``||variables:distanceRemaining||`` 
+by 1 to truncate any decimal digits.<br>
+e.g. 415.1125 becomes 415
+
 
 ```blocks
 function Update_Overlays () {
