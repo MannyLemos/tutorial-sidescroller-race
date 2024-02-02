@@ -258,9 +258,6 @@ ___
 ► Change the name to ``||sprites:Opponent_Spawner||``
 
 ```blocks
-namespace SpriteKind {
-    export const Projectile_Spawner = SpriteKind.create()
-}
 function Initialize_Objects () {
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
@@ -268,6 +265,7 @@ function Initialize_Objects () {
     OpponentSpawner = sprites.create(assets.image`temp1`, SpriteKind.Opponent_Spawner)
 }
 let myRacer: Sprite = null
+let Projectile_Spawner = SpriteKind.create()
 ```
 
 
