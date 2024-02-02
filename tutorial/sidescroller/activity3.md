@@ -267,8 +267,8 @@ ___
 2. Call the ``||functions:Update_Variables||`` function from inside the ``||logic:if||`` block we set up in the previous step.
 ___
 This structure means that<br>
-``||functions:Update_Variables||`` will be run every 25ms when<br>
-``||variables:raceStage||`` ``||logic:= 2||``
+``||functions:Update_Variables||`` will be run every<br>
+25ms when ``||variables:raceStage||`` ``||logic:= 2||``
 
 ```blocks
 function Update_Variables () {
@@ -297,11 +297,6 @@ ___
 Note: ``||sprites:mySprite.x||`` can be found in the ``||sprite:Sprites||`` category
 ___
 3. Insert the statement into the ``||functions:Update_Variables||`` function block.
-___
-This equation make progression velocity scale relative to the ``||variables:drsFactor||``
-and the players forward horizontal position. 
-The further to the right, the faster the speed, 
-and the higher the risk of crash.
 
 ```blocks
 function Update_Variables () {
@@ -374,7 +369,6 @@ function Update_Variables () {
     scroller.scrollBackgroundWithSpeed(progressionVelocity * -0.5, 0)
     distanceRemaining = Math.max(0, distanceRemaining - progressionVelocity * ((game.runtime() - loopStartTime) / 1000))
     loopStartTime = game.runtime()
-    timeSinceRaceStart = game.runtime() - raceStartTime
 }
 let myRacer: Sprite = null
 ```
@@ -389,8 +383,7 @@ ___
 ___
 2. Replace the **0** with<br>
 ``||game: time since start (ms)||``<br>
-subtract<br>
-``||variables:raceStartTime||``
+``||math:-||`` ``||variables:raceStartTime||``
 
 ```blocks
 function Update_Variables () {
