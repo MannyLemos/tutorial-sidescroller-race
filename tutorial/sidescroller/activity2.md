@@ -741,7 +741,7 @@ to<br>
 function Initialize_Overlays () {
     ElapsedTimeOverlay = textsprite.create("", 0, 1)
     ElapsedTimeOverlay.setPosition(0, 8)
-    VelocityOverlay = textsprite.create("0", 0, 1)
+    VelocityOverlay = textsprite.create("", 0, 1)
     VelocityOverlay.setPosition(125, 8)
 }
 let ElapsedTimeOverlay: TextSprite = null
@@ -782,7 +782,7 @@ to<br>
 function Initialize_Overlays () {
     ElapsedTimeOverlay = textsprite.create("", 0, 1)
     ElapsedTimeOverlay.setPosition(0, 8)
-    VelocityOverlay = textsprite.create("0", 0, 1)
+    VelocityOverlay = textsprite.create("", 0, 1)
     VelocityOverlay.setPosition(125, 8)
     RemainingDistanceOverlay = textsprite.create("", 0, 1)
     RemainingDistanceOverlay.setPosition(75, 8)
@@ -829,7 +829,7 @@ to<br>
 function Initialize_Overlays () {
     ElapsedTimeOverlay = textsprite.create("", 0, 1)
     ElapsedTimeOverlay.setPosition(0, 8)
-    VelocityOverlay = textsprite.create("0", 0, 1)
+    VelocityOverlay = textsprite.create("", 0, 1)
     VelocityOverlay.setPosition(125, 8)
     RemainingDistanceOverlay = textsprite.create("", 0, 1)
     RemainingDistanceOverlay.setPosition(75, 8)
