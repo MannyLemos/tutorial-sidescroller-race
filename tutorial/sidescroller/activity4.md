@@ -1,10 +1,6 @@
 # Enemies
 
 ```template
-namespace SpriteKind {
-    export const Projectile_Spawner = SpriteKind.create()
-    export const Finish_Line = SpriteKind.create()
-}
 function Initialize_Variables () {
     distanceRemaining = 1500
     raceStage = 0
@@ -262,6 +258,10 @@ ___
 ► Change the name to ``||sprites:Opponent_Spawner||``
 
 ```blocks
+namespace SpriteKind {
+    export const Projectile_Spawner = SpriteKind.create()
+    export const Finish_Line = SpriteKind.create()
+}
 function Initialize_Objects () {
     myRacer = sprites.create(assets.image`player-pink`, SpriteKind.Player)
     myRacer.setStayInScreen(true)
