@@ -267,8 +267,7 @@ function Enable_DRS () {
     DrsOverlay.setText("DRS")
     myRacer.setImage(assets.image`pink-player-drs`)
 }
-// @hide 
-let DrsOverlay = textsprite.create("", 0, 2) 
+let DrsOverlay: TextSprite = null
 let myRacer: Sprite = null
 ```
 
@@ -366,11 +365,11 @@ game.onUpdateInterval(25, function () {
 })
 ```
 
-## {Step 5}
+## {Step 6}
 Altering the DRS Factor
 ---
 1. Create an if **else** block with the condition:<br>
-``||logic:if||`` ``||variables:drsState||`` ``||logic:= 0 then||`` ||logic:else||``<br>
+``||logic:if||`` ``||variables:drsState||`` ``||logic:= 0 then||`` ``||logic:else||``<br>
 ___
 2. Place the ``||logic:if||`` block<br>
 you just created into the <br>
@@ -401,7 +400,7 @@ function Update_DRS_Factor () {
 }
 ```
 
-## {Step 6}
+## {Step 7}
 Setting up game Winning
 ---
 When the distance remaining drops below **0**, we want to display a finish line to players and mark the game as over.
@@ -445,7 +444,7 @@ game.onUpdateInterval(25, function () {
 })
 ```
 
-## {Step 7}
+## {Step 8}
 Setting up Run Finishing Sequence
 ---
 1. Click the ``||finish:Finish||`` category.
@@ -493,7 +492,7 @@ function Run_Finishing_Sequence () {
 }
 ```
 
-## {Step 8}
+## {Step 9}
 Player Overlaps Finish Line
 ---
 Now that our player will collide with a finish line sprite, we can use this event to trigger a game over sequence.
@@ -513,7 +512,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, o
 })
 ```
 
-## {Step 9}
+## {Step 10}
 Final Touches
 ---
 When a player wins, the player to finish line collision block will be the final piece of code that runs.
@@ -545,7 +544,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Finish_Line, function (sprite, o
 })
 ```
 
-## {Step 10}
+## {Step 11}
 CONGRATULATIONS!
 ---
 You have completed the race into stem make code arcade racing tutorial.
