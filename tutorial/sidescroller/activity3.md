@@ -294,7 +294,7 @@ ___
 ``||variables:set progressionVelocity to 0||``
 ___
 2. Replace the **0** with the expression in the hint.<br><br>
-Note: ``||sprite:mySprite.x||`` can be found in the ``||sprite:Sprites||`` category
+Note: ``||sprites:mySprite.x||`` can be found in the ``||sprite:Sprites||`` category
 ___
 3. Insert the statement into the ``||functions:Update_Variables||`` function block.
 
@@ -320,10 +320,9 @@ ___
 ___
 3. Change the ``||scroller:vy||`` from **-50** to **0**.
 ___
-4. Change the ``||scroller:vx||`` from **-50** to:<br>
+4. Change the ``||scroller:vx||`` from **-50** to:<br><br>
 ``||variables:progressionVelocity||``<br>
-multiplied by<br>
-**-0.5**
+``||math:x||`` **-0.5**
 
 ```blocks
 function Update_Variables () {
